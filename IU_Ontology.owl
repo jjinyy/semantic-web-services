@@ -993,9 +993,27 @@
     
 
 
-    <!-- http://localhost:3030/IU#Lovepoem_Song -->
+    <!-- http://localhost:3030/IU#MMA송라이터상2017년_MusicAward -->
 
-    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#Lovepoem_Song"/>
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#MMA송라이터상2017년_MusicAward">
+        <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#MMA올해의TOP10_2017년_MusicAward -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#MMA올해의TOP10_2017년_MusicAward">
+        <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#MMA올해의앨범상2017년_MusicAward -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#MMA올해의앨범상2017년_MusicAward">
+        <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
+    </owl:NamedIndividual>
     
 
 
@@ -1017,7 +1035,17 @@
 
     <!-- http://localhost:3030/IU#SolMate_Song -->
 
-    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#SolMate_Song"/>
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#SolMate_Song">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#Youtube_StreamingServiceCompany -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#Youtube_StreamingServiceCompany">
+        <rdf:type rdf:resource="http://localhost:3030/IU#StreamingServiceCompany"/>
+    </owl:NamedIndividual>
     
 
 
@@ -1045,6 +1073,46 @@
     
 
 
+    <!-- http://localhost:3030/IU#가온차트뮤직어워드작사가상2018년_MusicAward -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#가온차트뮤직어워드작사가상2018년_MusicAward">
+        <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#가온차트유직어워드올해롱런음원상2018년_MusicAward -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#가온차트유직어워드올해롱런음원상2018년_MusicAward">
+        <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#가온차트유직어워드올해음반제작상2018년_MusicAward -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#가온차트유직어워드올해음반제작상2018년_MusicAward">
+        <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#가온차트유직어워드올해작가상2018년_MusicAward -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#가온차트유직어워드올해작가상2018년_MusicAward">
+        <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#가을아침_SingleAlbum -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#가을아침_SingleAlbum">
+        <rdf:type rdf:resource="http://localhost:3030/IU#SingleAlbum"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://localhost:3030/IU#강이채 -->
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#강이채">
@@ -1055,13 +1123,17 @@
 
     <!-- http://localhost:3030/IU#결정_Song -->
 
-    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#결정_Song"/>
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#결정_Song">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://localhost:3030/IU#고양이_Song -->
 
-    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#고양이_Song"/>
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#고양이_Song">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+    </owl:NamedIndividual>
     
 
 
@@ -1069,6 +1141,14 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#고태영">
         <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#골든디스크음원대상2018년_MusicAward -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#골든디스크음원대상2018년_MusicAward">
+        <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
     </owl:NamedIndividual>
     
 
@@ -1087,13 +1167,17 @@
 
     <!-- http://localhost:3030/IU#그의그대_Song -->
 
-    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#그의그대_Song"/>
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#그의그대_Song">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://localhost:3030/IU#금요일에만나요_Song -->
 
-    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#금요일에만나요_Song"/>
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#금요일에만나요_Song">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+    </owl:NamedIndividual>
     
 
 
@@ -1121,9 +1205,19 @@
     
 
 
+    <!-- http://localhost:3030/IU#나의아저씨_DramaWork -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#나의아저씨_DramaWork">
+        <rdf:type rdf:resource="http://localhost:3030/IU#DramaWork"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://localhost:3030/IU#내사랑내곁에_Song -->
 
-    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#내사랑내곁에_Song"/>
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#내사랑내곁에_Song">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+    </owl:NamedIndividual>
     
 
 
@@ -1188,6 +1282,22 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#멜론_StreamingServiceCompany">
         <rdf:type rdf:resource="http://localhost:3030/IU#StreamingServiceCompany"/>
         <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">멜론</IU:companyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#멜론뮤직어워드송라이터상2018년_MusicAward -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#멜론뮤직어워드송라이터상2018년_MusicAward">
+        <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#멜론뮤직어워드올해앨범상2017년_MusicAward -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#멜론뮤직어워드올해앨범상2017년_MusicAward">
+        <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
     </owl:NamedIndividual>
     
 
@@ -1265,6 +1375,14 @@
     
 
 
+    <!-- http://localhost:3030/IU#빌도드올해의K-POP앨범2017년_MusicAward -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#빌도드올해의K-POP앨범2017년_MusicAward">
+        <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://localhost:3030/IU#삐삐_MusicVideo -->
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#삐삐_MusicVideo">
@@ -1277,6 +1395,22 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#삐삐_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#사랑이잘_SingleAlbum -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#사랑이잘_SingleAlbum">
+        <rdf:type rdf:resource="http://localhost:3030/IU#SingleAlbum"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#생일파티_FanMeeting -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#생일파티_FanMeeting">
+        <rdf:type rdf:resource="http://localhost:3030/IU#FanMeeting"/>
     </owl:NamedIndividual>
     
 
@@ -1372,10 +1506,26 @@
     
 
 
+    <!-- http://localhost:3030/IU#유희열 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#유희열">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Producer"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://localhost:3030/IU#이병우 -->
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#이병우">
         <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#이종훈 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#이종훈">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Lyricist"/>
     </owl:NamedIndividual>
     
 
@@ -1514,6 +1664,30 @@
     
 
 
+    <!-- http://localhost:3030/IU#한국대중음악상_올해의노래2018년_MusicAward -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#한국대중음악상_올해의노래2018년_MusicAward">
+        <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#한국대중음악상_올해의음반상2018년_MusicAward -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#한국대중음악상_올해의음반상2018년_MusicAward">
+        <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#한국대중음악상_올해의음악인2018년_MusicAward -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#한국대중음악상_올해의음악인2018년_MusicAward">
+        <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://localhost:3030/IU#혁오 -->
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#혁오">
@@ -1538,6 +1712,110 @@
     
 
 
+    <!-- http://localhost:3030/IU#2016년12월김범수콘서트_Concert -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2016년12월김범수콘서트_Concert">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#2016년12월서울_홍콩_대만_Concert -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2016년12월서울_홍콩_대만_Concert">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#2016년12월임슬옹콘서트_Concert -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2016년12월임슬옹콘서트_Concert">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#2016년SK올림픽핸드볼경기장_Concert -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2016년SK올림픽핸드볼경기장_Concert">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#2016년스물네걸음_하나둘셋넷_Concert -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2016년스물네걸음_하나둘셋넷_Concert">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#2017년10월G-Dragon대만콘서트_Concert -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2017년10월G-Dragon대만콘서트_Concert">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#2017년11월에픽하이콘서트_Concert -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2017년11월에픽하이콘서트_Concert">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#2017년11월투어콘서트팔레트_Concert -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2017년11월투어콘서트팔레트_Concert">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#2017년11월허각콘서트_Concert -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2017년11월허각콘서트_Concert">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#2017년6월G-Dragon서울콘서트_Concert -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2017년6월G-Dragon서울콘서트_Concert">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#2017년6월하동균콘서트_Concert -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2017년6월하동균콘서트_Concert">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#2017년8월싸이흠뻑쇼콘서트_Concert -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2017년8월싸이흠뻑쇼콘서트_Concert">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#2018년10월정은지콘서트_Concert -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2018년10월정은지콘서트_Concert">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://localhost:3030/IU#2018년10월콘서트_Concert -->
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2018년10월콘서트_Concert">
@@ -1546,6 +1824,62 @@
         <IU:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">서울 올림픽체조경기장</IU:location>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</IU:month>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#2018년7월윤미래콘서트_Concert -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2018년7월윤미래콘서트_Concert">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#2018년8월싸이콘서트_Concert -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2018년8월싸이콘서트_Concert">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#2018년8월지코콘서트_Concert -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2018년8월지코콘서트_Concert">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#2018년데뷔10주년기념전국투어콘서트_Concert -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2018년데뷔10주년기념전국투어콘서트_Concert">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#2018년서울콘서트_Concert -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2018년서울콘서트_Concert">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#2018년역대가장큰규모올림픽공원체조경기장_Concert -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2018년역대가장큰규모올림픽공원체조경기장_Concert">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#8주년팬미팅_FanMeeting -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#8주년팬미팅_FanMeeting">
+        <rdf:type rdf:resource="http://localhost:3030/IU#FanMeeting"/>
     </owl:NamedIndividual>
     
 
