@@ -1029,6 +1029,14 @@
     
 
 
+    <!-- http://localhost:3030/IU#너_Song -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#너_Song">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://localhost:3030/IU#멜론_StreamingServiceCompany -->
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#멜론_StreamingServiceCompany">
