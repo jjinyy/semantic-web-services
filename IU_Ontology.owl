@@ -131,7 +131,7 @@
         <rdfs:domain rdf:resource="http://localhost:3030/IU#Singer"/>
         <rdfs:range rdf:resource="http://localhost:3030/IU#Concert"/>
         <rdfs:range rdf:resource="http://localhost:3030/IU#FanMeeting"/>
-        <rdfs:comment>미티이나 콘서트등을 개최하다</rdfs:comment>
+        <rdfs:comment>미팅이나 콘서트등을 개최하다</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -1486,6 +1486,8 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#에잇_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+        <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:title>에잇</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1716,14 +1718,36 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2016년12월김범수콘서트_Concert">
         <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
+        <IU:participatesIn rdf:resource="http://localhost:3030/IU#2016년12월김범수콘서트_Concert"/>
+        <IU:month>12월</IU:month>
+        <IU:name>김범수콘서트</IU:name>
+        <IU:year>2016년</IU:year>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://localhost:3030/IU#2016년12월서울_홍콩_대만_Concert -->
+    <!-- http://localhost:3030/IU#2016년12월대만_Concert -->
 
-    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2016년12월서울_홍콩_대만_Concert">
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2016년12월대만_Concert">
         <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
+        <IU:holds rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:location>대만</IU:location>
+        <IU:month>12월</IU:month>
+        <IU:title>대만콘서트</IU:title>
+        <IU:year>2016년</IU:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#2016년12월서울_Concert -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2016년12월서울_Concert">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
+        <IU:holds rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:location>서울</IU:location>
+        <IU:month>12월</IU:month>
+        <IU:title>서울콘서트</IU:title>
+        <IU:year>2016년</IU:year>
     </owl:NamedIndividual>
     
 
@@ -1732,14 +1756,23 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2016년12월임슬옹콘서트_Concert">
         <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
+        <IU:participatesIn rdf:resource="http://localhost:3030/IU#2016년12월임슬옹콘서트_Concert"/>
+        <IU:month>12월</IU:month>
+        <IU:title>임슬옹콘서트</IU:title>
+        <IU:year>2016년</IU:year>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://localhost:3030/IU#2016년SK올림픽핸드볼경기장_Concert -->
+    <!-- http://localhost:3030/IU#2016년12월홍콩_Concert -->
 
-    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2016년SK올림픽핸드볼경기장_Concert">
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2016년12월홍콩_Concert">
         <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
+        <IU:holds rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:location>홍콩</IU:location>
+        <IU:month>12월</IU:month>
+        <IU:title>홍콩콘서트</IU:title>
+        <IU:year>2016년</IU:year>
     </owl:NamedIndividual>
     
 
@@ -1748,6 +1781,10 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2016년스물네걸음_하나둘셋넷_Concert">
         <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
+        <IU:holds rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:location>SK올림픽핸드볼경기장</IU:location>
+        <IU:title>스물네걸음:하나둘셋넷</IU:title>
+        <IU:year>2016년</IU:year>
     </owl:NamedIndividual>
     
 
@@ -1756,6 +1793,11 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2017년10월G-Dragon대만콘서트_Concert">
         <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
+        <IU:participatesIn rdf:resource="http://localhost:3030/IU#2017년6월G-Dragon서울콘서트_Concert"/>
+        <IU:location>대만</IU:location>
+        <IU:month>10월</IU:month>
+        <IU:title>G-Dragon대만콘서트</IU:title>
+        <IU:year>2017년</IU:year>
     </owl:NamedIndividual>
     
 
