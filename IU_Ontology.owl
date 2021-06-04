@@ -948,6 +948,15 @@
     
 
 
+    <!-- http://localhost:3030/IU#BillBoard_Association -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#BillBoard_Association">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Association"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">빌보드</IU:title>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://localhost:3030/IU#Blueming_Song -->
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#Blueming_Song">
@@ -969,6 +978,15 @@
         <IU:isOrignalSoundTrackOf rdf:resource="http://localhost:3030/IU#나의아저씨_DramaWork"/>
         <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DearMoon</IU:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#JTBC_BroadcastingCompany -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#JTBC_BroadcastingCompany">
+        <rdf:type rdf:resource="http://localhost:3030/IU#BroadcastingCompany"/>
+        <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JTBC</IU:companyName>
     </owl:NamedIndividual>
     
 
@@ -1009,11 +1027,25 @@
     
 
 
+    <!-- http://localhost:3030/IU#MMA2017년_MusicAward -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#MMA2017년_MusicAward">
+        <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
+        <IU:awardedBy rdf:resource="http://localhost:3030/IU#Mnet_BroadcastingCompany"/>
+        <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mnet</IU:companyName>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">송라이터상</IU:title>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">올해의Top10</IU:title>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">올해의앨범상</IU:title>
+        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</IU:year>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://localhost:3030/IU#MMA송라이터상2017년_MusicAward -->
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#MMA송라이터상2017년_MusicAward">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
-        <IU:won rdf:resource="http://localhost:3030/IU#MMA송라이터상2017년_MusicAward"/>
+        <IU:awardedBy rdf:resource="http://localhost:3030/IU#Mnet_BroadcastingCompany"/>
         <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mnet</IU:companyName>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MMA송라이터상</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</IU:year>
@@ -1025,7 +1057,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#MMA올해의TOP10_2017년_MusicAward">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
-        <IU:won rdf:resource="http://localhost:3030/IU#MMA올해의TOP10_2017년_MusicAward"/>
+        <IU:awardedBy rdf:resource="http://localhost:3030/IU#Mnet_BroadcastingCompany"/>
         <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mnet</IU:companyName>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MMA올해의TOP10</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</IU:year>
@@ -1037,7 +1069,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#MMA올해의앨범상2017년_MusicAward">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
-        <IU:won rdf:resource="http://localhost:3030/IU#MMA올해의앨범상2017년_MusicAward"/>
+        <IU:awardedBy rdf:resource="http://localhost:3030/IU#Mnet_BroadcastingCompany"/>
         <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mnet</IU:companyName>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MMA올해의앨범상</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</IU:year>
@@ -1049,7 +1081,6 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#Mnet_BroadcastingCompany">
         <rdf:type rdf:resource="http://localhost:3030/IU#BroadcastingCompany"/>
-        <IU:awardedBy rdf:resource="http://localhost:3030/IU#Mnet_BroadcastingCompany"/>
         <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mnet</IU:companyName>
     </owl:NamedIndividual>
     
@@ -1067,7 +1098,6 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#SBS_BroadcastingCompany">
         <rdf:type rdf:resource="http://localhost:3030/IU#BroadcastingCompany"/>
-        <IU:awardedBy rdf:resource="http://localhost:3030/IU#SBS_BroadcastingCompany"/>
         <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SBS</IU:companyName>
     </owl:NamedIndividual>
     
@@ -1078,11 +1108,10 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#SolMate_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
         <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
-        <IU:creates rdf:resource="http://localhost:3030/IU#지코"/>
         <IU:records rdf:resource="http://localhost:3030/IU#2018년7월멜론차트1위"/>
-        <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</IU:month>
         <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">멜론</IU:companyName>
-        <IU:rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</IU:rank>
+        <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</IU:month>
+        <IU:rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</IU:rank>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
     </owl:NamedIndividual>
     
@@ -1092,6 +1121,16 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#Youtube_StreamingServiceCompany">
         <rdf:type rdf:resource="http://localhost:3030/IU#StreamingServiceCompany"/>
+        <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Youtube</IU:companyName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#Youtube뮤직비디오조회_Record -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#Youtube뮤직비디오조회_Record">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Record"/>
+        <IU:awardedBy rdf:resource="http://localhost:3030/IU#Youtube_StreamingServiceCompany"/>
         <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Youtube</IU:companyName>
     </owl:NamedIndividual>
     
@@ -1126,8 +1165,7 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#가온차트뮤직어워드작사가상2018년_MusicAward">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
         <IU:awardedBy rdf:resource="http://localhost:3030/IU#KoreaMusicContent_Accociation"/>
-        <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">한국음악컨텐츠협회</IU:companyName>
-        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">작사가상</IU:title>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">가온뮤직어워드작사가상</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
     </owl:NamedIndividual>
     
@@ -1138,8 +1176,7 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#가온차트유직어워드올해롱런음원상2018년_MusicAward">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
         <IU:awardedBy rdf:resource="http://localhost:3030/IU#KoreaMusicContent_Accociation"/>
-        <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">한국음악컨텐츠협회</IU:companyName>
-        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">올해롱런음원상</IU:title>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">가온뮤직어워드올해롱런음원상</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
     </owl:NamedIndividual>
     
@@ -1150,8 +1187,7 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#가온차트유직어워드올해음반제작상2018년_MusicAward">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
         <IU:awardedBy rdf:resource="http://localhost:3030/IU#KoreaMusicContent_Accociation"/>
-        <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">한국음악컨텐츠협회</IU:companyName>
-        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">올해음반제작상</IU:title>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">가온뮤직어워드올해음반제작상</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
     </owl:NamedIndividual>
     
@@ -1162,8 +1198,7 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#가온차트유직어워드올해작가상2018년_MusicAward">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
         <IU:awardedBy rdf:resource="http://localhost:3030/IU#KoreaMusicContent_Accociation"/>
-        <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">한국음악컨텐츠협회</IU:companyName>
-        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">올해작사가상</IU:title>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">가온뮤직어워드올해작사가상</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
     </owl:NamedIndividual>
     
@@ -1175,10 +1210,12 @@
         <rdf:type rdf:resource="http://localhost:3030/IU#SingleAlbum"/>
         <IU:collaborateWith rdf:resource="http://localhost:3030/IU#양희은"/>
         <IU:composedBy rdf:resource="http://localhost:3030/IU#이병우"/>
+        <IU:creates rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#꽃갈피둘_RemakeAlbum"/>
         <IU:writtenBy rdf:resource="http://localhost:3030/IU#이병우"/>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</IU:month>
         <IU:preReleased rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</IU:preReleased>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">가을아침</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
     </owl:NamedIndividual>
     
@@ -1189,7 +1226,8 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#강이채">
         <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
         <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
-        <IU:creates rdf:resource="http://localhost:3030/IU#꽃갈피둘_RemakeAlbum"/>
+        <IU:participatesIn rdf:resource="http://localhost:3030/IU#꽃갈피둘_RemakeAlbum"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">강이채</IU:name>
     </owl:NamedIndividual>
     
 
@@ -1198,6 +1236,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#결정_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">결정</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1206,6 +1245,9 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#고양이_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+        <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:creates rdf:resource="http://localhost:3030/IU#선우정아"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">고양이</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1215,7 +1257,19 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#고태영">
         <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
         <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
-        <IU:creates rdf:resource="http://localhost:3030/IU#꽃갈피둘_RemakeAlbum"/>
+        <IU:participatesIn rdf:resource="http://localhost:3030/IU#꽃갈피둘_RemakeAlbum"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">고태영</IU:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#골든디스크음원대상2017년_MusicAward -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#골든디스크음원대상2017년_MusicAward">
+        <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
+        <IU:awardedBy rdf:resource="http://localhost:3030/IU#KoreaMusicContent_Accociation"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">골든디스크음원대상</IU:title>
+        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</IU:year>
     </owl:NamedIndividual>
     
 
@@ -1224,6 +1278,9 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#골든디스크음원대상2018년_MusicAward">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
+        <IU:awardedBy rdf:resource="http://localhost:3030/IU#KoreaMusicContent_Accociation"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">골든디스크음원대상</IU:title>
+        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
     </owl:NamedIndividual>
     
 
@@ -1234,7 +1291,7 @@
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#LovePoem_MiniAlbum"/>
         <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
-        <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</IU:order>
+        <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</IU:order>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">그사람</IU:title>
     </owl:NamedIndividual>
     
@@ -1244,6 +1301,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#그의그대_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">그의그대</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1252,6 +1310,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#금요일에만나요_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">금요일에만나요</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1260,6 +1319,9 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#김동률">
         <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
+        <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:creates rdf:resource="http://localhost:3030/IU#동화_Song"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">김동률</IU:name>
     </owl:NamedIndividual>
     
 
@@ -1269,7 +1331,8 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#김성모">
         <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
         <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
-        <IU:creates rdf:resource="http://localhost:3030/IU#꽃갈피둘_RemakeAlbum"/>
+        <IU:participatesIn rdf:resource="http://localhost:3030/IU#꽃갈피둘_RemakeAlbum"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">김성모</IU:name>
     </owl:NamedIndividual>
     
 
@@ -1279,7 +1342,10 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#꽃갈피둘_RemakeAlbum">
         <rdf:type rdf:resource="http://localhost:3030/IU#RemakeAlbum"/>
         <IU:creates rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:won rdf:resource="http://localhost:3030/IU#MMA송라이터상2017년_MusicAward"/>
+        <IU:won rdf:resource="http://localhost:3030/IU#MMA올해의TOP10_2017년_MusicAward"/>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</IU:month>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">꽃갈피둘</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</IU:year>
     </owl:NamedIndividual>
     
@@ -1289,7 +1355,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#나의아저씨_DramaWork">
         <rdf:type rdf:resource="http://localhost:3030/IU#DramaWork"/>
-        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">나의아저씨</IU:title>
+        <IU:title>나의아저씨</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
     </owl:NamedIndividual>
     
@@ -1299,6 +1365,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#내사랑내곁에_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">내사랑내곁에</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</IU:year>
     </owl:NamedIndividual>
     
@@ -1320,6 +1387,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#너의의미_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">너의의미</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1333,6 +1401,7 @@
         <IU:partOf rdf:resource="http://localhost:3030/IU#홀로있는사람들_ExtendedPlayAlbum"/>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</IU:month>
         <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</IU:order>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">누구나아는비밀</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</IU:year>
     </owl:NamedIndividual>
     
@@ -1344,11 +1413,12 @@
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
         <IU:creates rdf:resource="http://localhost:3030/IU#정승환"/>
         <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
-        <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">멜론</IU:companyName>
+        <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">멜론차트</IU:companyName>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</IU:month>
-        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
         <IU:preReleased rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</IU:preReleased>
         <IU:rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</IU:rank>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">눈사람</IU:title>
+        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
     </owl:NamedIndividual>
     
 
@@ -1357,6 +1427,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#데뷔1개월차가수">
         <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">데뷔1개월차가수</IU:name>
     </owl:NamedIndividual>
     
 
@@ -1365,6 +1436,10 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#동화_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+        <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:creates rdf:resource="http://localhost:3030/IU#김동률"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">동화</IU:title>
+        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
     </owl:NamedIndividual>
     
 
@@ -1373,6 +1448,10 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#마음_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+        <IU:creates rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">마음</IU:title>
+        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</IU:year>
     </owl:NamedIndividual>
     
 
@@ -1390,6 +1469,9 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#멜론뮤직어워드송라이터상2018년_MusicAward">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
+        <IU:awardedBy rdf:resource="http://localhost:3030/IU#멜론_StreamingServiceCompany"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">멜론뮤직어워드송라이터상</IU:title>
+        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
     </owl:NamedIndividual>
     
 
@@ -1398,6 +1480,10 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#멜론뮤직어워드올해앨범상2017년_MusicAward">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
+        <IU:awardedBy rdf:resource="http://localhost:3030/IU#멜론_StreamingServiceCompany"/>
+        <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">멜론</IU:companyName>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">멜론뮤직어워드올해앨범상</IU:title>
+        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</IU:year>
     </owl:NamedIndividual>
     
 
@@ -1406,6 +1492,10 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#무릎_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+        <IU:likes rdf:resource="http://localhost:3030/IU#무릎_Song"/>
+        <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">무릎</IU:title>
+        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</IU:year>
     </owl:NamedIndividual>
     
 
@@ -1414,6 +1504,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#미리메리크리스마스_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">미리메리크리스마스</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1422,6 +1513,10 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#밤편지_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+        <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:preReleased rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</IU:preReleased>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">밤편지</IU:title>
+        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</IU:year>
     </owl:NamedIndividual>
     
 
@@ -1430,6 +1525,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#버스킹가수">
         <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">버스킹가수</IU:name>
     </owl:NamedIndividual>
     
 
@@ -1438,6 +1534,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#벅스_StreamingServiceCompany">
         <rdf:type rdf:resource="http://localhost:3030/IU#StreamingServiceCompany"/>
+        <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">벅스</IU:companyName>
         <IU:isSubCharactor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">벅스</IU:isSubCharactor>
     </owl:NamedIndividual>
     
@@ -1447,6 +1544,9 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#봄사랑벚꽃말고_MusicVideo">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicVideo"/>
+        <IU:won rdf:resource="http://localhost:3030/IU#Youtube뮤직비디오조회_Record"/>
+        <IU:rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</IU:rank>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">봄사랑벚꽃말고</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1455,6 +1555,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#봄사랑벚꽃말고_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">봄사랑벚꽃말고</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1463,6 +1564,9 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#블루밍_MusicVideo">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicVideo"/>
+        <IU:won rdf:resource="http://localhost:3030/IU#Youtube뮤직비디오조회_Record"/>
+        <IU:rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</IU:rank>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">블루밍</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1471,6 +1575,10 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#비밀의화원_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+        <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:creates rdf:resource="http://localhost:3030/IU#선우정아"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">비밀의화원</IU:title>
+        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
     </owl:NamedIndividual>
     
 
@@ -1479,6 +1587,9 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#빌도드올해의K-POP앨범2017년_MusicAward">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
+        <IU:awardedBy rdf:resource="http://localhost:3030/IU#BillBoard_Association"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">빌보드올해의K-POP앨범</IU:title>
+        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</IU:year>
     </owl:NamedIndividual>
     
 
@@ -1487,9 +1598,11 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#삐삐_MusicVideo">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicVideo"/>
+        <IU:won rdf:resource="http://localhost:3030/IU#Youtube뮤직비디오조회_Record"/>
         <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Youtube</IU:companyName>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</IU:month>
         <IU:rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</IU:rank>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">삐삐</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
     </owl:NamedIndividual>
     
@@ -1499,6 +1612,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#삐삐_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">삐삐</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1507,6 +1621,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#사랑이잘_SingleAlbum">
         <rdf:type rdf:resource="http://localhost:3030/IU#SingleAlbum"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">사랑이잘</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1515,6 +1630,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#생일파티_FanMeeting">
         <rdf:type rdf:resource="http://localhost:3030/IU#FanMeeting"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">생일파티</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1523,6 +1639,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#선우정아">
         <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">선우정아</IU:name>
     </owl:NamedIndividual>
     
 
@@ -1531,6 +1648,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#스물셋_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">스물셋</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1556,7 +1674,6 @@
         <rdf:type rdf:resource="http://localhost:3030/IU#Producer"/>
         <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
         <owl:sameAs rdf:resource="http://localhost:3030/IU#이지금"/>
-        <IU:holds rdf:resource="http://localhost:3030/IU#2018년10월콘서트_Concert"/>
         <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">아이유</IU:name>
     </owl:NamedIndividual>
     
@@ -1566,6 +1683,8 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#양희은">
         <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
+        <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">양희은</IU:name>
     </owl:NamedIndividual>
     
 
@@ -1575,6 +1694,7 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#언니네이발관">
         <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
         <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">언니네이발관</IU:name>
     </owl:NamedIndividual>
     
 
@@ -1583,6 +1703,9 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#에잇_MusicVideo">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicVideo"/>
+        <IU:won rdf:resource="http://localhost:3030/IU#Youtube뮤직비디오조회_Record"/>
+        <IU:rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</IU:rank>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">에잇</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1592,7 +1715,7 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#에잇_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
         <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
-        <IU:title>에잇</IU:title>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">에잇</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1601,6 +1724,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#에픽하이9집_ExtendedPlayAlbum">
         <rdf:type rdf:resource="http://localhost:3030/IU#ExtendedPlayAlbum"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">에픽하이집</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1609,6 +1733,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#연애소설_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">연애소설</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1617,6 +1742,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#유희열">
         <rdf:type rdf:resource="http://localhost:3030/IU#Producer"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">유희열</IU:name>
     </owl:NamedIndividual>
     
 
@@ -1626,6 +1752,7 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#이병우">
         <rdf:type rdf:resource="http://localhost:3030/IU#Composer"/>
         <rdf:type rdf:resource="http://localhost:3030/IU#Lyricist"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">이병우</IU:name>
     </owl:NamedIndividual>
     
 
@@ -1634,6 +1761,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#이종훈">
         <rdf:type rdf:resource="http://localhost:3030/IU#Lyricist"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">이종훈</IU:name>
     </owl:NamedIndividual>
     
 
@@ -1652,6 +1780,9 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#잊어야한다는마음으로_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+        <IU:partOf rdf:resource="http://localhost:3030/IU#Youtube_StreamingServiceCompany"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">잊어야한다는마음으로</IU:title>
+        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
     </owl:NamedIndividual>
     
 
@@ -1673,7 +1804,8 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#적재">
         <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
         <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
-        <IU:creates rdf:resource="http://localhost:3030/IU#꽃갈피둘_RemakeAlbum"/>
+        <IU:participatesIn rdf:resource="http://localhost:3030/IU#꽃갈피둘_RemakeAlbum"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">적재</IU:name>
     </owl:NamedIndividual>
     
 
@@ -1683,7 +1815,8 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#정성하">
         <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
         <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
-        <IU:creates rdf:resource="http://localhost:3030/IU#꽃갈피둘_RemakeAlbum"/>
+        <IU:participatesIn rdf:resource="http://localhost:3030/IU#꽃갈피둘_RemakeAlbum"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">정성하</IU:name>
     </owl:NamedIndividual>
     
 
@@ -1692,6 +1825,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#정승환">
         <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">정승환</IU:name>
     </owl:NamedIndividual>
     
 
@@ -1700,6 +1834,8 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#정재일">
         <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
+        <IU:participatesIn rdf:resource="http://localhost:3030/IU#꽃갈피둘_RemakeAlbum"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">정재일</IU:name>
     </owl:NamedIndividual>
     
 
@@ -1708,6 +1844,9 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#지코">
         <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
+        <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:creates rdf:resource="http://localhost:3030/IU#SolMate_Song"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">지코</IU:name>
     </owl:NamedIndividual>
     
 
@@ -1716,6 +1855,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#챗셔_ExtendedPlayAlbum">
         <rdf:type rdf:resource="http://localhost:3030/IU#ExtendedPlayAlbum"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">챗셔</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1724,6 +1864,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#체리비">
         <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">체리비</IU:name>
     </owl:NamedIndividual>
     
 
@@ -1732,6 +1873,11 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#친구야친구_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+        <IU:composedBy rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">생일파티</IU:location>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">친구야친구</IU:title>
+        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</IU:year>
     </owl:NamedIndividual>
     
 
@@ -1740,6 +1886,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#코러스전문가수">
         <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">코러스전문가수</IU:name>
     </owl:NamedIndividual>
     
 
@@ -1748,6 +1895,12 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#팔레트_ExtendedPlayAlbum">
         <rdf:type rdf:resource="http://localhost:3030/IU#ExtendedPlayAlbum"/>
+        <IU:won rdf:resource="http://localhost:3030/IU#MMA2017년_MusicAward"/>
+        <IU:won rdf:resource="http://localhost:3030/IU#MMA송라이터상2017년_MusicAward"/>
+        <IU:won rdf:resource="http://localhost:3030/IU#MMA올해의TOP10_2017년_MusicAward"/>
+        <IU:won rdf:resource="http://localhost:3030/IU#MMA올해의앨범상2017년_MusicAward"/>
+        <IU:won rdf:resource="http://localhost:3030/IU#멜론뮤직어워드올해앨범상2017년_MusicAward"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">팔레트</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1756,6 +1909,9 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#팔레트_MusicVideo">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicVideo"/>
+        <IU:won rdf:resource="http://localhost:3030/IU#Youtube뮤직비디오조회_Record"/>
+        <IU:rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</IU:rank>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">팔레트</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1764,6 +1920,8 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#팔레트_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+        <IU:isTitleTrack rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</IU:isTitleTrack>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">팔레트</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1772,6 +1930,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#하루끝_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">하루끝</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1780,6 +1939,9 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#한국대중음악상_올해의노래2018년_MusicAward">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
+        <IU:awardedBy rdf:resource="http://localhost:3030/IU#KoreaMusicContent_Accociation"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">올해의노래</IU:title>
+        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
     </owl:NamedIndividual>
     
 
@@ -1788,6 +1950,9 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#한국대중음악상_올해의음반상2018년_MusicAward">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
+        <IU:awardedBy rdf:resource="http://localhost:3030/IU#KoreaMusicContent_Accociation"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">올해의음반상</IU:title>
+        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
     </owl:NamedIndividual>
     
 
@@ -1796,6 +1961,9 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#한국대중음악상_올해의음악인2018년_MusicAward">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
+        <IU:awardedBy rdf:resource="http://localhost:3030/IU#KoreaMusicContent_Accociation"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">올해의음악인</IU:title>
+        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
     </owl:NamedIndividual>
     
 
@@ -1805,7 +1973,19 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#혁오">
         <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
         <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
-        <IU:creates rdf:resource="http://localhost:3030/IU#꽃갈피둘_RemakeAlbum"/>
+        <IU:participatesIn rdf:resource="http://localhost:3030/IU#꽃갈피둘_RemakeAlbum"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">혁오</IU:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#형돈이와대준이 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#형돈이와대준이">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
+        <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:creates rdf:resource="http://localhost:3030/IU#결정_Song"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">형돈이와대준이</IU:name>
     </owl:NamedIndividual>
     
 
@@ -1816,6 +1996,7 @@
         <rdf:type rdf:resource="http://localhost:3030/IU#ExtendedPlayAlbum"/>
         <IU:creates rdf:resource="http://localhost:3030/IU#언니네이발관"/>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</IU:month>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">홀로있는사람들</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</IU:year>
     </owl:NamedIndividual>
     
@@ -1827,6 +2008,7 @@
         <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
         <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:creates rdf:resource="http://localhost:3030/IU#꽃갈피둘_RemakeAlbum"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">홍소진</IU:name>
     </owl:NamedIndividual>
     
 
@@ -1835,7 +2017,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2016년12월김범수콘서트_Concert">
         <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
-        <IU:participatesIn rdf:resource="http://localhost:3030/IU#2016년12월김범수콘서트_Concert"/>
+        <IU:participatesIn rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</IU:month>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">김범수콘서트</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</IU:year>
@@ -1847,7 +2029,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2016년12월대만_Concert">
         <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
-        <IU:holds rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:heldBy rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">대만</IU:location>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</IU:month>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">대만콘서트</IU:title>
@@ -1860,7 +2042,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2016년12월서울_Concert">
         <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
-        <IU:holds rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:heldBy rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">서울</IU:location>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</IU:month>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">서울콘서트</IU:title>
@@ -1873,7 +2055,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2016년12월임슬옹콘서트_Concert">
         <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
-        <IU:participatesIn rdf:resource="http://localhost:3030/IU#2016년12월임슬옹콘서트_Concert"/>
+        <IU:participatesIn rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</IU:month>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">임슬옹콘서트</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</IU:year>
@@ -1885,7 +2067,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2016년12월홍콩_Concert">
         <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
-        <IU:holds rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:heldBy rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">홍콩</IU:location>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</IU:month>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">홍콩콘서트</IU:title>
@@ -1898,7 +2080,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2016년스물네걸음_하나둘셋넷_Concert">
         <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
-        <IU:holds rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:heldBy rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SK올림픽핸드볼경기장</IU:location>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">스물네걸음:하나둘셋넷</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</IU:year>
@@ -1910,7 +2092,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2017년10월G-Dragon대만콘서트_Concert">
         <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
-        <IU:participatesIn rdf:resource="http://localhost:3030/IU#2017년6월G-Dragon서울콘서트_Concert"/>
+        <IU:participatesIn rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">대만</IU:location>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</IU:month>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G-Dragon대만콘서트</IU:title>
@@ -1923,7 +2105,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2017년11월에픽하이콘서트_Concert">
         <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
-        <IU:participatesIn rdf:resource="http://localhost:3030/IU#2017년11월에픽하이콘서트_Concert"/>
+        <IU:participatesIn rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</IU:month>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">에픽하이콘서트</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</IU:year>
@@ -1935,8 +2117,12 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2017년11월투어콘서트팔레트_Concert">
         <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
-        <IU:holds rdf:resource="http://localhost:3030/IU#아이유"/>
-        <IU:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WorldWide</IU:location>
+        <IU:heldBy rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">광주</IU:location>
+        <IU:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">부산</IU:location>
+        <IU:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">서울</IU:location>
+        <IU:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">청주</IU:location>
+        <IU:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">홍콩</IU:location>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</IU:month>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">월드투어콘서트</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</IU:year>
@@ -1948,7 +2134,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2017년11월허각콘서트_Concert">
         <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
-        <IU:participatesIn rdf:resource="http://localhost:3030/IU#2017년11월허각콘서트_Concert"/>
+        <IU:participatesIn rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</IU:month>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">허각콘서트</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</IU:year>
@@ -1960,11 +2146,11 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2017년6월G-Dragon서울콘서트_Concert">
         <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
-        <IU:participatesIn rdf:resource="http://localhost:3030/IU#2017년6월G-Dragon서울콘서트_Concert"/>
+        <IU:participatesIn rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">서울</IU:location>
-        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</IU:year>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</IU:month>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G-Dragon서울콘서트</IU:title>
+        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</IU:year>
     </owl:NamedIndividual>
     
 
@@ -1973,7 +2159,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2017년6월하동균콘서트_Concert">
         <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
-        <IU:participatesIn rdf:resource="http://localhost:3030/IU#2017년6월하동균콘서트_Concert"/>
+        <IU:participatesIn rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</IU:month>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">하동균콘서트</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</IU:year>
@@ -1985,7 +2171,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2017년8월싸이흠뻑쇼콘서트_Concert">
         <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
-        <IU:participatesIn rdf:resource="http://localhost:3030/IU#2017년8월싸이흠뻑쇼콘서트_Concert"/>
+        <IU:participatesIn rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</IU:month>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">싸이흠뻑쇼콘서트</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</IU:year>
@@ -1997,9 +2183,9 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2018년10월정은지콘서트_Concert">
         <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
-        <IU:participatesIn rdf:resource="http://localhost:3030/IU#2018년10월정은지콘서트_Concert"/>
-        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">정은지콘서트</IU:title>
+        <IU:participatesIn rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</IU:month>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">정은지콘서트</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
     </owl:NamedIndividual>
     
@@ -2021,7 +2207,8 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2018년7월멜론차트1위">
         <rdf:type rdf:resource="http://localhost:3030/IU#Record"/>
-        <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">멜론</IU:companyName>
+        <IU:awardedBy rdf:resource="http://localhost:3030/IU#멜론_StreamingServiceCompany"/>
+        <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">멜론차트</IU:companyName>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</IU:month>
         <IU:rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</IU:rank>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
@@ -2033,7 +2220,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2018년7월윤미래콘서트_Concert">
         <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
-        <IU:participatesIn rdf:resource="http://localhost:3030/IU#2018년7월윤미래콘서트_Concert"/>
+        <IU:participatesIn rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</IU:month>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">윤미래콘서트</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
@@ -2045,7 +2232,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2018년8월싸이콘서트_Concert">
         <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
-        <IU:participatesIn rdf:resource="http://localhost:3030/IU#2018년8월싸이콘서트_Concert"/>
+        <IU:participatesIn rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</IU:month>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">싸이콘서트</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
@@ -2057,7 +2244,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2018년8월지코콘서트_Concert">
         <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
-        <IU:participatesIn rdf:resource="http://localhost:3030/IU#2018년8월지코콘서트_Concert"/>
+        <IU:participatesIn rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</IU:month>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">지코콘서트</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
@@ -2069,7 +2256,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2018년데뷔10주년기념전국투어콘서트_Concert">
         <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
-        <IU:holds rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:heldBy rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">전국</IU:location>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">데뷔10주년기념전국투어콘서트</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
@@ -2081,7 +2268,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2018년서울콘서트_Concert">
         <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
-        <IU:holds rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:heldBy rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">서울</IU:location>
         <IU:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">올림픽체조경기장</IU:location>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">서울콘서트</IU:title>
