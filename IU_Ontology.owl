@@ -1019,20 +1019,6 @@
     
 
 
-    <!-- http://localhost:3030/IU#MMA2017년_MusicAward -->
-
-    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#MMA2017년_MusicAward">
-        <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
-        <IU:awardedBy rdf:resource="http://localhost:3030/IU#Mnet_BroadcastingCompany"/>
-        <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mnet</IU:companyName>
-        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">송라이터상</IU:title>
-        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">올해의Top10</IU:title>
-        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">올해의앨범상</IU:title>
-        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</IU:year>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://localhost:3030/IU#MMA송라이터상2017년_MusicAward -->
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#MMA송라이터상2017년_MusicAward">
@@ -1152,20 +1138,9 @@
     
 
 
-    <!-- http://localhost:3030/IU#가온차트뮤직어워드작사가상2018년_MusicAward -->
+    <!-- http://localhost:3030/IU#가온차트뮤직어워드올해롱런음원상2018년_MusicAward -->
 
-    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#가온차트뮤직어워드작사가상2018년_MusicAward">
-        <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
-        <IU:awardedBy rdf:resource="http://localhost:3030/IU#KoreaMusicContent_Accociation"/>
-        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">가온뮤직어워드작사가상</IU:title>
-        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://localhost:3030/IU#가온차트유직어워드올해롱런음원상2018년_MusicAward -->
-
-    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#가온차트유직어워드올해롱런음원상2018년_MusicAward">
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#가온차트뮤직어워드올해롱런음원상2018년_MusicAward">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
         <IU:awardedBy rdf:resource="http://localhost:3030/IU#KoreaMusicContent_Accociation"/>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">가온뮤직어워드올해롱런음원상</IU:title>
@@ -1174,9 +1149,9 @@
     
 
 
-    <!-- http://localhost:3030/IU#가온차트유직어워드올해음반제작상2018년_MusicAward -->
+    <!-- http://localhost:3030/IU#가온차트뮤직어워드올해음반제작상2018년_MusicAward -->
 
-    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#가온차트유직어워드올해음반제작상2018년_MusicAward">
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#가온차트뮤직어워드올해음반제작상2018년_MusicAward">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
         <IU:awardedBy rdf:resource="http://localhost:3030/IU#KoreaMusicContent_Accociation"/>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">가온뮤직어워드올해음반제작상</IU:title>
@@ -1185,9 +1160,9 @@
     
 
 
-    <!-- http://localhost:3030/IU#가온차트유직어워드올해작가상2018년_MusicAward -->
+    <!-- http://localhost:3030/IU#가온차트뮤직어워드올해작가상2018년_MusicAward -->
 
-    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#가온차트유직어워드올해작가상2018년_MusicAward">
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#가온차트뮤직어워드올해작가상2018년_MusicAward">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
         <IU:awardedBy rdf:resource="http://localhost:3030/IU#KoreaMusicContent_Accociation"/>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">가온뮤직어워드올해작사가상</IU:title>
@@ -1505,6 +1480,9 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#밤편지_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+        <IU:won rdf:resource="http://localhost:3030/IU#가온차트뮤직어워드올해작가상2018년_MusicAward"/>
+        <IU:won rdf:resource="http://localhost:3030/IU#골든디스크음원대상2017년_MusicAward"/>
+        <IU:won rdf:resource="http://localhost:3030/IU#멜론뮤직어워드송라이터상2018년_MusicAward"/>
         <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:preReleased rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</IU:preReleased>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">밤편지</IU:title>
@@ -1887,7 +1865,6 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#팔레트_ExtendedPlayAlbum">
         <rdf:type rdf:resource="http://localhost:3030/IU#ExtendedPlayAlbum"/>
-        <IU:won rdf:resource="http://localhost:3030/IU#MMA2017년_MusicAward"/>
         <IU:won rdf:resource="http://localhost:3030/IU#MMA송라이터상2017년_MusicAward"/>
         <IU:won rdf:resource="http://localhost:3030/IU#MMA올해의TOP10_2017년_MusicAward"/>
         <IU:won rdf:resource="http://localhost:3030/IU#MMA올해의앨범상2017년_MusicAward"/>
