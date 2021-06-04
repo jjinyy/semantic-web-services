@@ -2552,7 +2552,8 @@
 												  
 	<owl:NamedIndividual rdf:about="http://localhost:3030/IU#종현_Singer">
 		<rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
-		<IU:Sing rdf:resource="http://localhost:3030/IU#우울시계_Song"/>												<IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
+		<IU:Sing rdf:resource="http://localhost:3030/IU#우울시계_Song"/>
+    <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
 	</owl:NamedIndividual>
 
 
