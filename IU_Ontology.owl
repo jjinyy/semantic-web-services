@@ -1005,7 +1005,7 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#GrowingUp_RegularAlbum">
         <rdf:type rdf:resource="http://localhost:3030/IU#ExtendedPlayAlbum"/>
         <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#Boo_Song"/>
-        <IU:title>Growing Up</IU:title>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Growing Up</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1047,7 +1047,7 @@
         <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#Everything&apos;sAlright_Song"/>
         <IU:numberOfTracks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</IU:numberOfTracks>
         <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</IU:order>
-        <IU:title>LastFantasy</IU:title>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LastFantasy</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1067,7 +1067,7 @@
         <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#미아_Song"/>
         <IU:IsDebutAlbum>Y</IU:IsDebutAlbum>
         <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</IU:order>
-        <IU:title>Lost and found</IU:title>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lost and found</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1181,7 +1181,7 @@
         <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#좋은날_Song"/>
         <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</IU:order>
         <IU:released>2010-12-09T00:00:00</IU:released>
-        <IU:title>REAL</IU:title>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REAL</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1504,7 +1504,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#나의아저씨_DramaWork">
         <rdf:type rdf:resource="http://localhost:3030/IU#DramaWork"/>
-        <IU:title>나의아저씨</IU:title>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">나의아저씨</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
     </owl:NamedIndividual>
     
@@ -1615,7 +1615,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#드림하이_DramaWork">
         <rdf:type rdf:resource="http://localhost:3030/IU#DramaWork"/>
-        <IU:title>드림하이</IU:title>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">드림하이</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1633,7 +1633,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#마당을나온암탉_MovieWork">
         <rdf:type rdf:resource="http://localhost:3030/IU#MovieWork"/>
-        <IU:title>마당을나온암탉</IU:title>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">마당을나온암탉</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1948,7 +1948,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#선덕여왕_DramaWork">
         <rdf:type rdf:resource="http://localhost:3030/IU#DramaWork"/>
-        <IU:title>선덕여왕</IU:title>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">선덕여왕</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1984,7 +1984,7 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#스무살의봄_SingleAlbum">
         <rdf:type rdf:resource="http://localhost:3030/IU#SingleAlbum"/>
         <IU:numberOfTracks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</IU:numberOfTracks>
-        <IU:title>스무살의봄</IU:title>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">스무살의봄</IU:title>
     </owl:NamedIndividual>
     
 
@@ -2068,7 +2068,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#앨리샤_Dramawork">
         <rdf:type rdf:resource="http://localhost:3030/IU#DramaWork"/>
-        <IU:title>앨리샤</IU:title>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">앨리샤</IU:title>
     </owl:NamedIndividual>
     
 
@@ -2171,7 +2171,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#외인구단_DramaWork">
         <rdf:type rdf:resource="http://localhost:3030/IU#DramaWork"/>
-        <IU:title>외인구단</IU:title>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">외인구단</IU:title>
     </owl:NamedIndividual>
     
 
@@ -2823,7 +2823,7 @@
         <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#아침눈물_Song"/>
         <IU:numberOfTracks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</IU:numberOfTracks>
         <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</IU:order>
-        <IU:title>IU…IM</IU:title>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IU…IM</IU:title>
     </owl:NamedIndividual>
     
 
@@ -2832,7 +2832,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#You&amp;I_SingleAlbum">
         <rdf:type rdf:resource="http://localhost:3030/IU#SingleAlbum"/>
-        <IU:title>You &amp; I</IU:title>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">You &amp; I</IU:title>
     </owl:NamedIndividual>
     
     
