@@ -245,6 +245,14 @@
         <rdfs:comment>작사하다</rdfs:comment>
     </owl:ObjectProperty>
     
+    
+    
+    <!-- http://localhost:3030/IU#Sing -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:3030/IU#Sing">
+        <rdfs:domain rdf:resource="http://localhost:3030/IU#Singer"/>
+        <rdfs:range rdf:resource="http://localhost:3030/IU#Song"/>
+    </owl:ObjectProperty>
 
 
     <!-- 
