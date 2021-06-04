@@ -990,12 +990,12 @@
 
 
     <!-- http://localhost:3030/IU#DearMoon_Song -->
-
+    
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#DearMoon_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
         <IU:isOrignalSoundTrackOf rdf:resource="http://localhost:3030/IU#나의아저씨_DramaWork"/>
         <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
-        <IU:name>DearMoon</IU:name>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DearMoon</IU:title>
     </owl:NamedIndividual>
     
 
@@ -1507,8 +1507,6 @@
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">나의아저씨</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
     </owl:NamedIndividual>
-    
-
 
     <!-- http://localhost:3030/IU#내사랑내곁에_Song -->
 
@@ -1524,6 +1522,10 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#너_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+        <IU:composedBy rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">너</IU:title>
+        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</IU:year>
     </owl:NamedIndividual>
     
 
