@@ -1,0 +1,204 @@
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix iu:<http://localhost:3030/IU#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ref: <http://purl.org/vocab/relationship/>
+PREFIX ui: <http://www.w3.org/ns/ui#>
+
+###########################################################################
+#2016년에쓴 자작곡 이름은?
+###########################################################################
+SELECT ?songTitle
+WHERE {
+  ?x iu:title ?songTitle .
+  ?x rdf:type iu:Song .
+  ?x iu:year 2016 .
+  ?x iu:composedBy ?아이유 .
+  ?x iu:writtenBy ?아이유 .	
+}
+###########################################################################
+#2016년 콘서트 진행한 도시는?
+###########################################################################
+SELECT ?location
+WHERE {
+  ?x iu:year 2016 .
+  ?x rdf:type iu:Concert .
+  ?x iu:location ?location .
+  ?x iu:heldBy ?아이유
+}
+###########################################################################
+#멜론차트에서 매년 아이유의 봄노래는?
+###########################################################################
+SELECT ?songName
+WHERE {
+  ?x iu:title ?songName .
+  ?x iu:won ?streamingCompany .
+  ?x iu:genre ?genre_ .
+  filter regex(str(?streamingCompany),'멜론') .
+  filter regex(str(?genre_),'봄') .
+}
+###########################################################################
+#2016년도 아이유가 참여한 콘서트는?
+###########################################################################
+select ?concertName
+where{
+  ?x iu:title ?concertName .
+  ?x iu:year 2016 .
+  ?x iu:participatesIn ?아이유 .
+}
+###########################################################################
+#꽃갈피둘 앨범에 참여한 가수들은?
+###########################################################################
+select ?singerName
+where{
+  ?x iu:name ?singerName .
+  ?x iu:participatesIn ?Album .
+ filter regex(str(?Album),'꽃갈피둘') .
+}
+###########################################################################
+#아이유의 선공개 곡은?
+###########################################################################
+SELECT ?songName
+WHERE {
+  ?x iu:title ?songName .
+  ?x iu:preReleased true .
+}
+###########################################################################
+#2017년도 콘서트를 한 도시는?
+###########################################################################
+SELECT ?location
+WHERE {
+  ?x iu:year 2017 .
+  ?x rdf:type iu:Concert .
+  ?x iu:location ?location .
+  ?x iu:heldBy ?아이유
+}
+###########################################################################	
+#팔레트로 수상한 상 내역은?
+###########################################################################
+SELECT ?songName ?songAward
+WHERE {
+  ?x iu:title ?songName .
+  ?x iu:won ?songAward.
+  filter regex(str(?songName),'팔레트') .
+}
+###########################################################################	
+#2017년도에 수상한 상들은?
+###########################################################################	
+SELECT distinct?songAward
+WHERE { 
+?x iu:title ?songAward .
+?x iu:year 2017 .
+?x iu:awardedBy ?companyName .
+}
+###########################################################################	
+#2017년도에 작사한 곡은?
+###########################################################################	
+SELECT ?songName
+WHERE {
+  ?x iu:year 2017 .
+  ?x iu:title ?songName .
+  ?x rdf:type iu:Song .
+  ?x iu:writtenBy ?아이유
+}
+###########################################################################	
+#2017년에 아이유가 참여한 콘서트의 가수는?
+###########################################################################	
+select ?concertName
+where{
+  ?x iu:title ?concertName .
+ ?x iu:year 2017 .
+ ?x iu:participatesIn ?아이유 .
+}
+###########################################################################	
+#밤편지 노래로 수상한 상은?
+###########################################################################	
+select ?songName ?songAward
+where{
+?x iu:title ?songName .
+?x iu:won ?songAward .
+filter regex(str(?songName),'밤편지')
+}
+###########################################################################	
+#아이유 유튜브뮤직비디오 조회순위는?
+###########################################################################	
+SELECT ?MVName ?Rank
+WHERE {
+  ?y iu:won ?x .
+ ?y iu:rank ?Rank .
+  ?y iu:title ?MVName
+  {
+    SELECT ?x 
+    WHERE {
+      ?x rdf:type iu:Record .
+      ?x iu:awardedBy ?Youtube_StreamingServiceCompany .
+    }
+  }
+}order by ?Rank
+###########################################################################	
+#유튜브를 통해 공개한 뮤직비디오곡이름은?
+###########################################################################	
+SELECT ?mvName
+WHERE {
+  ?x iu:title ?mvName .
+  ?x iu:partOf ?streamingCompany .
+  filter regex(str(?streamingCompany),'Youtube') .
+}
+###########################################################################	
+#나의아저씨OST에서 작사한 곡은?
+###########################################################################	
+select ?songName
+where{
+ ?x iu:title ?songName .
+ ?x iu:writtenBy ?아이유 .
+ ?x iu:isOrignalSoundTrackOf ?나의아저씨_DramaWork .
+}
+
+###########################################################################	
+#2018년 가온차트뮤직어워드에서 수상한 내역은?
+###########################################################################	
+SELECT ?awardName ?streamingCompany
+WHERE {
+  ?x iu:title ?awardName .
+  ?x iu:year 2018 .
+ filter regex(str(?awardName),'가온')
+}
+###########################################################################	
+#2018년에 아이유가 참여한 콘서트의 가수는?
+###########################################################################	
+select ?concertName
+where{
+  ?x iu:title ?concertName .
+ ?x iu:year 2018 .
+ ?x iu:participatesIn ?아이유 .
+}
+###########################################################################	
+#선우정아와 관련된 곡은?
+###########################################################################	
+select ?songName ?origSinger
+where{
+ ?x iu:title ?songName .
+ ?x iu:collaborateWith ?아이유 .
+ ?x iu:creates ?origSinger .
+ filter regex(str(?origSinger),'선우정아') .
+}
+###########################################################################	
+#지코앨범에 참여한 곡은?
+###########################################################################	
+select ?songName ?origSinger
+where{
+  ?x iu:title ?songName .
+?x iu:collaborateWith ?아이유 .
+ ?x iu:creates ?origSinger .
+filter regex(str(?origSinger),'지코') .
+}
+###########################################################################	
+#김동률 앨범에 참여한 곡은?
+###########################################################################	
+select ?songName ?origSinger
+where{
+  ?x iu:title ?songName .
+?x iu:collaborateWith ?아이유 .
+ ?x iu:creates ?origSinger .
+filter regex(str(?origSinger),'김동률') .
+}
