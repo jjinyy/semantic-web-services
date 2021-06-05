@@ -1,0 +1,348 @@
+###########################################################################
+#1.미아가 수록된 앨범은?
+###########################################################################
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix iu:<http://localhost:3030/IU#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ref: <http://purl.org/vocab/relationship/>
+PREFIX ui: <http://www.w3.org/ns/ui#>
+SELECT ?partOf
+WHERE {
+    ?x iu:partOf ?partOf .
+    ?x rdf:type iu:Song .
+    ?x iu:title ?"미아" .
+}
+
+###########################################################################
+#2.아이유의 데뷔곡이 수록된 앨범은?
+###########################################################################
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix iu:<http://localhost:3030/IU#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ref: <http://purl.org/vocab/relationship/>
+PREFIX ui: <http://www.w3.org/ns/ui#>
+SELECT ?y
+WHERE {
+  ?y rdf:type/rdfs:subClassOf* iu:MusicAlbum .
+  ?y iu:hasTrackOf ?x .
+  {
+    SELECT ?x
+    WHERE {
+     ?x rdf:type iu:Song .
+     ?x iu:debutSongOf ?아이유 .
+    }
+  }
+}
+
+###########################################################################
+#3.로스트 & 파운드 앨범의 프로듀서는?
+###########################################################################
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix iu:<http://localhost:3030/IU#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ref: <http://purl.org/vocab/relationship/>
+PREFIX ui: <http://www.w3.org/ns/ui#>
+SELECT ?result
+WHERE {
+ ?x iu:producedBy ?result .
+ ?x rdf:type iu:MiniAlbum .
+ ?x iu:order 1 .
+}
+
+###########################################################################
+#4.아이유의 데뷔곡은?
+###########################################################################
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix iu:<http://localhost:3030/IU#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ref: <http://purl.org/vocab/relationship/>
+PREFIX ui: <http://www.w3.org/ns/ui#>
+SELECT ?result
+WHERE {
+ ?x iu:title ?result .
+ ?x rdf:type iu:Song .
+ ?x iu:debutSongOf ?아이유 .
+}
+
+###########################################################################
+#5.부가 수록된 앨범제목은?
+###########################################################################
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix iu:<http://localhost:3030/IU#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ref: <http://purl.org/vocab/relationship/>
+PREFIX ui: <http://www.w3.org/ns/ui#>
+SELECT ?result
+WHERE {
+    ?y iu:title ?result .
+    ?y rdf:type/rdfs:subClassOf* iu:MusicAlbum .
+    ?y iu:hasTrackOf ?x .
+    {
+        SELECT ?x
+        WHERE {
+            ?x rdf:type iu:Song .
+            ?x iu:title ?"부" .
+        }
+    }
+}
+
+###########################################################################
+#6.아이유 1집 Growing Up은 2009년 발매했다.
+###########################################################################
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix iu:<http://localhost:3030/IU#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ref: <http://purl.org/vocab/relationship/>
+PREFIX ui: <http://www.w3.org/ns/ui#>
+SELECT ?result
+WHERE {
+    ?x iu:title ?result .
+    ?x rdf:type/rdfs:subClassOf* iu:MusicAlbum .
+    ?x iu:year 2009 .
+}
+
+###########################################################################
+#7.미니앨범 2집의 총 재생시간은?
+###########################################################################
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix iu:<http://localhost:3030/IU#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ref: <http://purl.org/vocab/relationship/>
+PREFIX ui: <http://www.w3.org/ns/ui#>
+SELECT ?time
+WHERE {
+ ?x iu:runningTime ?time .
+ ?x rdf:type iu:MiniAlbum .
+ ?x iu:order 2 .
+}
+
+###########################################################################	
+#8.마쉬멜로우는 뮤직비디오를 제작했다.
+###########################################################################
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix iu:<http://localhost:3030/IU#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ref: <http://purl.org/vocab/relationship/>
+PREFIX ui: <http://www.w3.org/ns/ui#>
+SELECT ?x
+WHERE {
+ ?x rdf:type iu:MusicVideo .
+ ?x iu:expressFor ?마쉬멜로우_Song .
+}
+
+###########################################################################	
+#9.두번째 미니앨범의 수록곡 장르 목록은?
+###########################################################################	
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix iu:<http://localhost:3030/IU#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ref: <http://purl.org/vocab/relationship/>
+PREFIX ui: <http://www.w3.org/ns/ui#>
+SELECT ?genre
+WHERE {
+  ?y iu:genre ?genre .
+  ?y iu:title ?title .
+  ?y rdf:type iu:Song .
+  ?y iu:partOf ?x .
+  {
+    SELECT ?x
+    WHERE {
+    ?x rdf:type iu:MiniAlbum .
+    ?x iu:order 2 .
+    }
+  }
+}
+GROUP BY ?genre
+
+###########################################################################	
+#10.REAL의 발매일자는?
+###########################################################################	
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix iu:<http://localhost:3030/IU#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ref: <http://purl.org/vocab/relationship/>
+PREFIX ui: <http://www.w3.org/ns/ui#>
+SELECT ?result
+WHERE {
+    ?x iu:released ?result .
+    ?x rdf:type iu:MiniAlbum .
+    ?x iu:order 3 .
+}
+
+###########################################################################	
+#11.서울에서 열린 아이유의 콘서트는?
+###########################################################################	
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix iu:<http://localhost:3030/IU#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ref: <http://purl.org/vocab/relationship/>
+PREFIX ui: <http://www.w3.org/ns/ui#>
+SELECT ?x
+WHERE {
+ ?x rdf:type iu:Concert .
+ ?x iu:location ?"서울" .
+}
+
+###########################################################################	
+#12.나만 몰랐던 이야기가 수록된 앨범 제목은?
+###########################################################################	
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix iu:<http://localhost:3030/IU#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ref: <http://purl.org/vocab/relationship/>
+PREFIX ui: <http://www.w3.org/ns/ui#>
+SELECT ?result
+WHERE {
+    ?y iu:title ?result .
+    ?y rdf:type/rdfs:subClassOf* iu:MusicAlbum .
+    ?y iu:hasTrackOf ?x .
+    {
+        SELECT ?x
+        WHERE {
+            ?x rdf:type iu:Song .
+            ?x iu:title ?"나만몰랐던이야기" .
+        }
+    }
+}
+
+###########################################################################	
+#13.나만 몰랐던 이야기의 작사, 작곡가 이름은?
+###########################################################################	
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix iu:<http://localhost:3030/IU#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ref: <http://purl.org/vocab/relationship/>
+PREFIX ui: <http://www.w3.org/ns/ui#>
+SELECT ?result1 ?result2
+WHERE {
+ ?x iu:writtenBy ?result1 .
+ ?x iu:composedBy ?result2 .
+ ?x rdf:type iu:Song .
+ ?x iu:title ?"나만몰랐던이야기" .
+}
+
+###########################################################################	
+#14.너랑 나의 작사, 작곡가 이름은?
+###########################################################################	
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix iu:<http://localhost:3030/IU#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ref: <http://purl.org/vocab/relationship/>
+PREFIX ui: <http://www.w3.org/ns/ui#>
+SELECT ?result1 ?result2
+WHERE {
+ ?x iu:writtenBy ?result1 .
+ ?x iu:composedBy ?result2 .
+ ?x rdf:type iu:Song .
+ ?x iu:title ?"너랑나" .
+}
+
+###########################################################################	
+#15.정규 2집의 수록곡 목록은?
+###########################################################################	
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix iu:<http://localhost:3030/IU#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ref: <http://purl.org/vocab/relationship/>
+PREFIX ui: <http://www.w3.org/ns/ui#>
+SELECT ?result
+WHERE {
+ ?x iu:hasTrackOf ?result .
+ ?x rdf:type iu:ExtendedPlayAlbum .
+ ?x iu:order ?2 .
+}
+
+###########################################################################	
+#16.정규 2집의 수록곡은 총 몇곡인가?
+###########################################################################	
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix iu:<http://localhost:3030/IU#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ref: <http://purl.org/vocab/relationship/>
+PREFIX ui: <http://www.w3.org/ns/ui#>
+SELECT ?result
+WHERE {
+ ?x iu:numberOfTracks ?result .
+ ?x rdf:type iu:ExtendedPlayAlbum .
+ ?x iu:order 2 .
+}
+
+###########################################################################	
+#17.두번째 정규앨범 제목은?
+###########################################################################	
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix iu:<http://localhost:3030/IU#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ref: <http://purl.org/vocab/relationship/>
+PREFIX ui: <http://www.w3.org/ns/ui#>
+SELECT ?result
+WHERE {
+ ?x iu:title ?result .
+ ?x rdf:type iu:ExtendedPlayAlbum .
+ ?x iu:order 2 .
+}
+
+###########################################################################	
+#18.너랑 나의 수상 내역은?
+###########################################################################	
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix iu:<http://localhost:3030/IU#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ref: <http://purl.org/vocab/relationship/>
+PREFIX ui: <http://www.w3.org/ns/ui#>
+SELECT ?won
+WHERE {
+    ?x iu:won ?won .
+    ?x rdf:type iu:Song .
+    ?x iu:title ?"너랑나" .
+}
+
+###########################################################################	
+#19. 스무살의 봄 싱글앨범의 총 수록곡 수는?
+###########################################################################	
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix iu:<http://localhost:3030/IU#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ref: <http://purl.org/vocab/relationship/>
+PREFIX ui: <http://www.w3.org/ns/ui#>
+SELECT ?x ?count
+WHERE {
+  ?x iu:numberOfTracks ?count .
+  ?x rdf:type iu:SingleAlbum .
+}
+
+###########################################################################	
+#20.성시경과 콜레보레이션한 가수 이름은?
+###########################################################################	
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix iu:<http://localhost:3030/IU#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ref: <http://purl.org/vocab/relationship/>
+PREFIX ui: <http://www.w3.org/ns/ui#>
+SELECT ?result
+WHERE {
+ ?x iu:collaborateWith ?result .
+ ?x rdf:type iu:Singer .
+ ?x iu:name "성시경" .
+}

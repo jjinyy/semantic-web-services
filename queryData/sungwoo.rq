@@ -1,0 +1,61 @@
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix : <http://localhost:3030/IU#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+#################################################
+# CQ1. 아이유가 2018년 10월에 콘서트를 연 장소는? #######	
+#################################################
+
+SELECT ?location
+WHERE {
+  ?x :year 2018 .
+  ?x :month 10 .
+  ?x rdf:type :Concert .
+  ?x :location ?location .
+  ?x :heldBy :아이유
+}
+
+
+#################################################
+# CQ2. 아이유 2019년 11월 가온차트 상을 받은 곡은? ######
+#################################################	
+
+SELECT ?title
+WHERE {
+  ?y :won ?x .
+  ?y :title ?title
+  {
+    SELECT ?x 
+    WHERE {
+      ?x :year 2019 .
+      ?x :month 11 .
+      ?x rdf:type :MusicAward .
+      ?x :awardedBy ?KoreaMusicContent_Association .
+    }
+  }
+}
+
+
+#################################################
+# CQ2. 아이유가 2019년 11월 발매한 앨범의 선공개곡 은? ###
+#################################################
+
+SELECT ?albumTitle ?songTitle
+WHERE {
+  ?x :title ?albumTitle .
+  ?y :title ?songTitle .
+  ?y rdf:type :Song .
+  ?y :partOf ?x .
+  ?y :preReleased true .
+  {
+    SELECT ?x ?released
+    WHERE {
+      ?x :released ?released .
+      ?x rdf:type/rdfs:subClassOf* :MusicAlbum .
+      FILTER (?released > "2019-11-01T00:00:00"^^xsd:dateTime) .
+      FILTER (?released < "2019-11-30T23:59:59"^^xsd:dateTime)
+    }
+  }
+}
