@@ -1054,7 +1054,6 @@
     
 
 
-
     <!-- http://localhost:3030/IU#DearMoon_Song -->
     
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#DearMoon_Song">
@@ -1644,6 +1643,17 @@
     
 
 
+    <!-- http://localhost:3030/IU#골든디스크음원대상2017년_MusicAward -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#골든디스크음원대상2017년_MusicAward">
+        <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
+        <IU:awardedBy rdf:resource="http://localhost:3030/IU#KoreaMusicContent_Accociation"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">골든디스크음원대상</IU:title>
+        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</IU:year>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://localhost:3030/IU#골든디스크음원대상2018년_MusicAward -->
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#골든디스크음원대상2018년_MusicAward">
@@ -1858,6 +1868,8 @@
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">나의아저씨</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
     </owl:NamedIndividual>
+    
+
 
     <!-- http://localhost:3030/IU#나의옛날이야기_Song -->
 
@@ -2198,7 +2210,6 @@
         <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
         <IU:Sing rdf:resource="http://localhost:3030/IU#레옹_Song"/>
         <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
-        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">박명수</IU:name>
     </owl:NamedIndividual>
     
 
@@ -2287,11 +2298,11 @@
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
         <IU:isTitleTrackOf rdf:resource="http://localhost:3030/IU#ModernTimes_ExtendedPlayAlbum"/>
         <IU:isTitleTrack rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</IU:isTitleTrack>
-        <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</IU:month>
-        <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</IU:order>
-        <IU:rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</IU:rank>
+        <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</IU:month>
+        <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</IU:order>
+        <IU:rank rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</IU:rank>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">분홍신</IU:title>
-        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2013</IU:year>
+        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2013</IU:year>
     </owl:NamedIndividual>
     
 
@@ -2371,7 +2382,7 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#삐에로는우릴보고웃지_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#꽃갈피_RemakeAlbum"/>
-        <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</IU:order>
+        <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</IU:order>
     </owl:NamedIndividual>
     
 
@@ -2401,7 +2412,7 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#사랑이지나가면_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#꽃갈피_RemakeAlbum"/>
-        <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</IU:order>
+        <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</IU:order>
     </owl:NamedIndividual>
     
 
@@ -2426,11 +2437,8 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#새신발_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
-        <IU:composedBy rdf:resource="http://localhost:3030/IU#이종훈"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#CHAT-SHIRE_MiniAlbum"/>
-        <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
-        <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</IU:order>
-        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">새신발</IU:title>
+        <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</IU:order>
     </owl:NamedIndividual>
     
 
@@ -2451,7 +2459,6 @@
         <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
         <IU:Sing rdf:resource="http://localhost:3030/IU#소격동_Song"/>
         <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
-        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">서태지</IU:name>
     </owl:NamedIndividual>
     
 
@@ -2519,8 +2526,8 @@
         <IU:isTitleTrackOf rdf:resource="http://localhost:3030/IU#CHAT-SHIRE_MiniAlbum"/>
         <IU:producedBy rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:isTitleTrack rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</IU:isTitleTrack>
-        <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</IU:order>
-        <IU:rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</IU:rank>
+        <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</IU:order>
+        <IU:rank rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</IU:rank>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">스물셋</IU:title>
     </owl:NamedIndividual>
     
@@ -2560,7 +2567,7 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#싫은날_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#ModernTimes_ExtendedPlayAlbum"/>
-        <IU:numberOfTracks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</IU:numberOfTracks>
+        <IU:numberOfTracks rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</IU:numberOfTracks>
     </owl:NamedIndividual>
     
 
@@ -2570,7 +2577,7 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#아이야나랑걷자_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#ModernTimes_ExtendedPlayAlbum"/>
-        <IU:numberOfTracks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</IU:numberOfTracks>
+        <IU:numberOfTracks rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</IU:numberOfTracks>
     </owl:NamedIndividual>
     
 
@@ -2621,7 +2628,7 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#안경_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#CHAT-SHIRE_MiniAlbum"/>
-        <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</IU:order>
+        <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</IU:order>
     </owl:NamedIndividual>
     
 
@@ -2669,7 +2676,7 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#어허야둥기둥기_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#꽃갈피_RemakeAlbum"/>
-        <IU:numberOfTracks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</IU:numberOfTracks>
+        <IU:numberOfTracks rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</IU:numberOfTracks>
     </owl:NamedIndividual>
     
 
@@ -2750,7 +2757,7 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#여름밤의꿈_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#꽃갈피_RemakeAlbum"/>
-        <IU:numberOfTracks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</IU:numberOfTracks>
+        <IU:numberOfTracks rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</IU:numberOfTracks>
     </owl:NamedIndividual>
     
 
@@ -2774,17 +2781,6 @@
         <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
         <owl:sameAs rdf:resource="http://localhost:3030/IU#혁오"/>
         <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">오혁</IU:name>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://localhost:3030/IU#올해의가수1위_MusicAward -->
-
-    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#올해의가수1위_MusicAward">
-        <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
-        <IU:awardedBy rdf:resource="http://localhost:3030/IU#KoreaMusicContent_Accociation"/>
-        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">올해의가수1위</IU:name>
-        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</IU:year>
     </owl:NamedIndividual>
     
 
