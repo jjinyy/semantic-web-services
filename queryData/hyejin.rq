@@ -8,465 +8,258 @@ PREFIX ui: <http://www.w3.org/ns/ui#>
   
 
 ################################################# 
-
 # CQ1. 세번째 정규앨범의 타이틀곡은?	 
-
 ################################################# 
 
   
-
 SELECT ?song 
-
 WHERE{ 
-
   ?x iu:title ?song . 
-
   ?x iu:isTitleTrackOf ?Album . 
-
 FILTER regex(str(?Album),'ModernTimes') . 
-
   ?x iu:isTitleTrack ?true . 
-
   
 
 ################################################# 
-
 # CQ2. 아이유와 '봄사랑벚꽃말고'를 콜라보레이션 한 가수는? 
-
 #################################################	 
 
-  
-
+ 
 SELECT ?singerName 
-
 WHERE{ 
-
   ?x iu:name ?singerName . 
-
   ?x iu:collaborateWith ?Singer . 
-
 FILTER regex(str(?Singer),'아이유') . 
-
   ?x iu:Sing ?Song . 
-
 FILTER regex(str(?Song),'봄사랑벚꽃말고') . 
-
-  
-
   
 
 ################################################# 
-
 # CQ3. 아이유와 '너의 의미'를 콜라보레이션 한 가수는? 
-
 ################################################# 
 
   
-
 SELECT ?singerName 
-
 WHERE{ 
-
   ?x iu:name ?singerName . 
-
   ?x iu:collaborateWith ?Singer . 
-
 FILTER regex(str(?Singer),'아이유') . 
-
   ?x iu:Sing ?Song . 
-
 FILTER regex(str(?Song),'너의의미') . 
 
-  
-
-  
 
 ################################################# 
-
 # CQ4. 세번째 정규앨범이 발매된 년도는? 
-
 ################################################# 
 
-  
-
 SELECT ?result 
-
 WHERE { 
-
 ?x iu:year ?result . 
-
 ?x rdf:type iu:ExtendedPlayAlbum . 
-
 ?x iu:order 3 . 
-
   
 
 ################################################# 
-
 # CQ5. 아이유가 프로듀싱하고 2015년 발매된 미니앨범의 수록곡수는? 
-
 ################################################# 
 
-  
-
+ 
 SELECT ?result 
-
 WHERE { 
-
 ?x iu:producedBy ?아이유 . 
-
 ?x rdf:type iu:MiniAlbum . 
-
 ?x iu:numberOfTracks ?result . 
-
 ?x iu:year ?2015 . 
-
   
-
+  
 ################################################# 
-
 # CQ6. 2015년 발매한 미니앨범의 프로듀서는? 
-
 ################################################# 
 
-  
 
 SELECT ?result 
-
 WHERE { 
-
 ?x iu:producedBy ?result . 
-
 ?x rdf:type iu:MiniAlbum . 
-
 ?x iu:year ?2015 . 
-
-  
+ 
 
 ################################################# 
-
 # CQ7. 2015년 아이유가 프로듀싱한 곡 이름은? 
-
-################################################# 
+################################################ 
 
   
-
 SELECT ?result 
-
 WHERE{ 
-
 ?x rdf:type iu:Song . 
-
   ?x iu:title ?result . 
-
   ?x iu:year ?2015 . 
-
   ?x iu:producedBy ?Singer . 
-
 FILTER regex(str(?Singer),'아이유') . 
 
   
-
 ################################################# 
-
 # CQ8. 곡 '마음'이 발매된 시기는? 
-
 ################################################# 
 
   
-
 SELECT ?result 
-
 WHERE{ 
-
   ?x iu:title ?Song . 
-
 FILTER regex(str(?Song),'마음') . 
-
-?x rdf:type iu:Song . 
-
+ ?x rdf:type iu:Song . 
   ?x iu:released ?result . 
-
-  
+ 
 
 ################################################# 
-
 # CQ9. 세번째 정규음반의 트랙의 갯수는? 
-
 ################################################# 
 
   
-
 SELECT ?result 
-
 WHERE { 
-
 ?x iu:numberOfTracks ?result . 
-
 ?x rdf:type iu:ExtendedPlayAlbum . 
-
 ?x iu:order 3 . 
 
-  
 
 ################################################# 
-
 # CQ10. 모던타임즈에 수록된 곡중에 아이유가 작곡한 노래는? 
-
 ################################################# 
 
-  
-
+ 
 SELECT ?result 
-
 WHERE{ 
-
   ?x iu:partOf ?Album . 
-
 FILTER regex(str(?Album),'ModernTimes') . 
-
   ?x iu:composedBy ?PD . 
-
 FILTER regex(str(?PD),'아이유') . 
-
 ?x rdf:type iu:Song . 
-
   ?x iu:title ?result . 
 
-  
-
 ################################################# 
-
 # CQ11. 2013년에 발매한 정규앨범의 수록곡은? 
-
 ################################################# 
 
   
-
 SELECT ?result 
-
 WHERE { 
-
 ?x iu:hasTrackOf ?result . 
-
 ?x rdf:type iu:ExtendedPlayAlbum . 
-
 ?x iu:year 2013 . 
 
-  
 
 ################################################# 
-
 # CQ12. Can yoy hear me의 타이틀곡은? 
-
 ################################################# 
 
-  
 
 SELECT ?result 
-
 WHERE { 
-
   ?x iu:isTitleTrackOf ?Album . 
-
 FILTER regex(str(?Album),'CanYouHearMe') .  
-
 ?x rdf:type iu:Song . 
-
 ?x iu:title ?result . 
-
 ?x iu:isTitleTrackOf ?true . 
 
-  
 
 ################################################# 
-
 # CQ13. 아이유가 '소격동'을 콜라보레이션 한 가수는? 
-
 ################################################# 
 
-  
 
 SELECT ?result 
-
 WHERE{ 
-
   ?x iu:collaborateWith ?Singer . 
-
 FILTER regex(str(?Singer),'아이유') .  
-
 ?x iu:Sing ?Song . 
-
 FILTER regex(str(?Song),'소격동') . 
-
 ?x rdf:type iu:Singer . 
-
   ?x iu:name ?result . 
 
-  
 
 ################################################# 
-
 # CQ14. 아이유와 레옹을 부른 사람는? 
-
 ################################################# 
 
-  
 
 SELECT ?result 
-
 WHERE{ 
-
   ?x iu:collaborateWith ?Singer . 
-
 FILTER regex(str(?Singer),'아이유') .  
-
   ?x iu:Sing ?Song . 
-
 FILTER regex(str(?Song),'레옹') .  
-
 ?x rdf:type iu:Singer . 
-
   ?x iu:name ?result . 
-
   
 
 ################################################# 
-
 # CQ15. 올해의 가수 1위를 수상한 년도는? 
-
 ################################################# 
-
   
-
 SELECT ?result 
-
 WHERE{ 
-
   ?x iu:name ?Award . 
-
 FILTER regex(str(?Award),'올해의가수1위') .  
-
 ?x rdf:type iu:MusicAward . 
-
   ?x iu:year ?result . 
-
   
-
 ################################################# 
-
 # CQ16. 챗셔 수록곡중 아이유가 작사, 작곡한 노래는? 
-
 ################################################# 
-
   
-
 SELECT ?result 
-
 WHERE{ 
-
   ?x iu:partOf?Album . 
-
 FILTER regex(str(?Album),'CHAT-SHIRE') . 
-
   ?x iu:writtenBy?Lyricist . 
-
 FILTER regex(str(?Lyricist),'아이유') . 
-
   ?x iu:composedBy?composer . 
-
 FILTER regex(str(?composer),'아이유') . 
-
 ?x rdf:type iu:Song . 
-
 ?x iu:title ?result . 
-
   
-
 ################################################# 
-
 # CQ17. 첫번째 리메이크 앨범에 수록된 곡은? 
-
 ################################################# 
-
   
-
 SELECT ?result 
-
 WHERE { 
-
 ?x iu:hasTrackOf ?result . 
-
 ?x rdf:type iu:RemakeAlbum . 
-
 ?x iu:order 1 . 
-
   
-
 ################################################# 
-
 # CQ18. 챗-셔에 수록된 첫번째 곡의 작곡가는? 
-
 ################################################# 
-
   
-
 SELECT ?result 
-
 WHERE{ 
-
   ?x iu:partOf?Album . 
-
 FILTER regex(str(?Album),'CHAT-SHIRE') . 
-
 ?x rdf:type iu:Song . 
-
 ?x iu:order ?1. 
-
 ?x iu:composedBy ?result. 
-
   
-
 ################################################# 
-
 # CQ19. 아이유와 콜라보레이션 한 가수들은? 
-
 ################################################# 
-
   
-
 SELECT ?result 
-
 WHERE{ 
-
   ?x iu:collaborateWith?Singer . 
-
 FILTER regex(str(?Singer),'아이유') . 
-
 ?x rdf:type iu:Singer . 
-
 ?x iu:name ?result. 
-
   
-
 ################################################# 
-
 # CQ20. 분홍신이 수록되어있는 정규앨범의 장르는? 
-
 ################################################# 
-
   
-
 SELECT ?result 
-
 WHERE{ 
-
   ?x iu:hasTrackOf?Song . 
-
 FILTER regex(str(?Song),'분홍신') . 
-
 ?x rdf:type iu:ExtendedPlayAlbum . 
-
 ?x iu:genre ?result. 
-
  
