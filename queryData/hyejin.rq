@@ -9,11 +9,11 @@ PREFIX ui: <http://www.w3.org/ns/ui#>
 # CQ1. 세번째 정규앨범의 타이틀곡은?	
 #################################################
 
-select ?song
-where{
+SELECT ?song
+WHERE{
   ?x iu:title ?song .
   ?x iu:isTitleTrackOf ?Album .
- filter regex(str(?Album),'ModernTimes') .
+ FILTER regex(str(?Album),'ModernTimes') .
   ?x iu:isTitleTrack ?true .
 
 #################################################
