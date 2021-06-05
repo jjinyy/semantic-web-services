@@ -1,10 +1,12 @@
-#################################################
-# CQ1. 아이유가 2018년 10월에 콘서트를 연 장소는? #######	
-#################################################
 prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix : <http://localhost:3030/IU#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+#################################################
+# CQ1. 아이유가 2018년 10월에 콘서트를 연 장소는? #######	
+#################################################
 
 SELECT ?location
 WHERE {
@@ -19,12 +21,6 @@ WHERE {
 #################################################
 # CQ2. 아이유 2019년 11월 가온차트 상을 받은 곡은? ######
 #################################################	
-
-prefix owl: <http://www.w3.org/2002/07/owl#>
-prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-prefix : <http://localhost:3030/IU#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX ref: <http://purl.org/vocab/relationship/>
 
 SELECT ?title
 WHERE {
@@ -45,19 +41,6 @@ WHERE {
 #################################################
 # CQ2. 아이유가 2019년 11월 발매한 앨범의 선공개곡 은? ###
 #################################################
-
-prefix owl: <http://www.w3.org/2002/07/owl#>
-prefix xsd: <http://www.w3.org/2001/XMLSchema#>
-prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-prefix iu:<http://localhost:3030/IU#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX ref: <http://purl.org/vocab/relationship/>
-
-prefix owl: <http://www.w3.org/2002/07/owl#>
-prefix xsd: <http://www.w3.org/2001/XMLSchema#>
-prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-prefix : <http://localhost:3030/IU#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 SELECT ?albumTitle ?songTitle
 WHERE {
