@@ -1,0 +1,71 @@
+# CQ1. 아이유가 2018년 10월에 콘서트를 연 장소는?	
+
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix iu:<http://localhost:3030/IU#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?location
+WHERE {
+  ?x iu:year 2018 .
+  ?x iu:month 10 .
+  ?x rdf:type iu:Concert .
+  ?x iu:location ?location .
+  ?x iu:heldBy ?아이유
+}
+
+
+
+#CQ2. 아이유 2019년 11월 가온차트 상을 받은 곡은?	
+
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix iu:<http://localhost:3030/IU#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ref: <http://purl.org/vocab/relationship/>
+PREFIX ui: <http://www.w3.org/ns/ui#>
+
+SELECT ?title
+WHERE {
+  ?y iu:won ?x .
+  ?y iu:title ?title
+  {
+    SELECT ?x 
+    WHERE {
+      ?x iu:year 2019 .
+      ?x iu:month 11 .
+      ?x rdf:type iu:MusicAward .
+      ?x iu:awardedBy ?KoreaMusicContent_Association .
+    }
+  }
+}
+
+
+
+#CQ2. 아이유가 2019년 11월 발매한 앨범의 선공개곡은?
+
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix iu:<http://localhost:3030/IU#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ref: <http://purl.org/vocab/relationship/>
+PREFIX ui: <http://www.w3.org/ns/ui#>
+
+SELECT ?albumTitle ?songTitle
+WHERE {
+  ?x iu:title ?albumTitle .
+  ?y iu:title ?songTitle .
+  ?y rdf:type iu:Song .
+  ?y iu:partOf ?x .
+  ?y iu:preReleased true .
+  {
+    SELECT ?x ?released
+    WHERE {
+      ?x iu:released ?released .
+      ?x rdf:type/rdfs:subClassOf* iu:MusicAlbum .
+      FILTER (?released > ""2019-11-01T00:00:00""^^xsd:dateTime) .
+      FILTER (?released < ""2019-11-30T23:59:59""^^xsd:dateTime)
+    }
+  }
+}
