@@ -3,16 +3,16 @@
 #################################################
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-prefix iu:<http://localhost:3030/IU#>
+prefix : <http://localhost:3030/IU#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 SELECT ?location
 WHERE {
-  ?x iu:year 2018 .
-  ?x iu:month 10 .
-  ?x rdf:type iu:Concert .
-  ?x iu:location ?location .
-  ?x iu:heldBy ?아이유
+  ?x :year 2018 .
+  ?x :month 10 .
+  ?x rdf:type :Concert .
+  ?x :location ?location .
+  ?x :heldBy :아이유
 }
 
 
@@ -22,22 +22,21 @@ WHERE {
 
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-prefix iu:<http://localhost:3030/IU#>
+prefix : <http://localhost:3030/IU#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX ref: <http://purl.org/vocab/relationship/>
-PREFIX ui: <http://www.w3.org/ns/ui#>
 
 SELECT ?title
 WHERE {
-  ?y iu:won ?x .
-  ?y iu:title ?title
+  ?y :won ?x .
+  ?y :title ?title
   {
     SELECT ?x 
     WHERE {
-      ?x iu:year 2019 .
-      ?x iu:month 11 .
-      ?x rdf:type iu:MusicAward .
-      ?x iu:awardedBy ?KoreaMusicContent_Association .
+      ?x :year 2019 .
+      ?x :month 11 .
+      ?x rdf:type :MusicAward .
+      ?x :awardedBy ?KoreaMusicContent_Association .
     }
   }
 }
@@ -53,22 +52,27 @@ prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix iu:<http://localhost:3030/IU#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX ref: <http://purl.org/vocab/relationship/>
-PREFIX ui: <http://www.w3.org/ns/ui#>
+
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix : <http://localhost:3030/IU#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 SELECT ?albumTitle ?songTitle
 WHERE {
-  ?x iu:title ?albumTitle .
-  ?y iu:title ?songTitle .
-  ?y rdf:type iu:Song .
-  ?y iu:partOf ?x .
-  ?y iu:preReleased true .
+  ?x :title ?albumTitle .
+  ?y :title ?songTitle .
+  ?y rdf:type :Song .
+  ?y :partOf ?x .
+  ?y :preReleased true .
   {
     SELECT ?x ?released
     WHERE {
-      ?x iu:released ?released .
-      ?x rdf:type/rdfs:subClassOf* iu:MusicAlbum .
-      FILTER (?released > ""2019-11-01T00:00:00""^^xsd:dateTime) .
-      FILTER (?released < ""2019-11-30T23:59:59""^^xsd:dateTime)
+      ?x :released ?released .
+      ?x rdf:type/rdfs:subClassOf* :MusicAlbum .
+      FILTER (?released > "2019-11-01T00:00:00"^^xsd:dateTime) .
+      FILTER (?released < "2019-11-30T23:59:59"^^xsd:dateTime)
     }
   }
 }
