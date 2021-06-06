@@ -172,6 +172,7 @@ FILTER regex(str(?Album),'CanYouHearMe') .
 ?x rdf:type iu:Song . 
 ?x iu:title ?result . 
 ?x iu:isTitleTrackOf ?true . 
+  }
 
 
 ################################################# 
