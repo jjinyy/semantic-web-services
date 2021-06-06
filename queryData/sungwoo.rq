@@ -295,3 +295,57 @@ WHERE {
 	?x rdf:type/rdfs:subClassOf* :MusicArtist .
 	?x :collaborateWith | ^:collaborateWith :아이유
 }
+
+나얼이 작곡한 곡은?
+
+SELECT ?title
+WHERE {
+	?x :title ?title .
+	?x :composedBy ?y .
+	{
+		SELECT ?y
+		WHERE {
+			?y :name "나얼"^^xsd:string  .
+			?y rdf:type :Composer .
+			?y :collaborateWith :아이유
+		}
+	}
+}
+
+
+타짜 김윤석이 출연한 뮤직비디오는?
+
+
+SELECT ?title
+WHERE {
+	?x :title ?title .
+	?y :participatesIn ?x .
+	?x rdf:type :MusicVideo .
+	{
+		SELECT ?y
+		WHERE {
+			?y rdf:type/rdfs:subClassOf* :Artist .
+			?y :name "김윤석"^^xsd:string .
+			?y :collaborateWith :아이유
+		}
+	}
+}
+
+
+
+우기가 프로듀싱한 곡은?
+
+
+SELECT ?title
+WHERE {
+	?x :title ?title .
+	?x :producedBy ?y .
+	{
+		SELECT ?y
+		WHERE {
+			?y :name "우기"^^xsd:string  .
+			?y rdf:type :Producer .
+			?y :collaborateWith :아이유
+		}
+	}
+}
