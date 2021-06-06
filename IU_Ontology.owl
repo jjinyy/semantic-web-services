@@ -1020,6 +1020,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#CHAT-SHIRE_MiniAlbum">
         <rdf:type rdf:resource="http://localhost:3030/IU#MiniAlbum"/>
+
         <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#RedQueen_Song"/>
         <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#Zezé_Song"/>
         <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#마음_Song"/>
@@ -1028,10 +1029,10 @@
         <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#스물셋_Song"/>
         <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#안경_Song"/>
         <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#푸르던_Song"/>
-        <IU:producedBy rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:numberOfTracks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</IU:numberOfTracks>
         <IU:released rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-10-27T00:00:00</IU:released>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</IU:year>
+        <IU:producedBy rdf:resource="http://localhost:3030/IU#아이유"/>
     </owl:NamedIndividual>
     
 
@@ -1046,16 +1047,16 @@
         <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#TheAgeOfTheCathedrals_Song"/>
         <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#Truth_Song"/>
         <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#Voice-mail_Song"/>
-        <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</IU:month>
-        <IU:numberOfTracks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</IU:numberOfTracks>
+        <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</IU:month>
+        <IU:numberOfTracks rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</IU:numberOfTracks>
         <IU:released rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-03-12T00:00:00</IU:released>
-        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2013</IU:year>
+        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2013</IU:year>
     </owl:NamedIndividual>
     
 
 
     <!-- http://localhost:3030/IU#DearMoon_Song -->
-
+    
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#DearMoon_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
         <IU:isOrignalSoundTrackOf rdf:resource="http://localhost:3030/IU#나의아저씨_DramaWork"/>
@@ -1080,8 +1081,8 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#GrowingUp_RegularAlbum">
         <rdf:type rdf:resource="http://localhost:3030/IU#ExtendedPlayAlbum"/>
         <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#Boo_Song"/>
-        <IU:released>2009-04-23T00:00:00</IU:released>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Growing Up</IU:title>
+        <IU:released>2009-04-23T00:00:00</IU:released>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2009</IU:year>
     </owl:NamedIndividual>
     
@@ -1262,7 +1263,7 @@
         <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#을의연애_Song"/>
         <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#한낮의꿈_Song"/>
         <IU:genre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jazz</IU:genre>
-        <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</IU:month>
+        <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</IU:month>        
         <IU:numberOfTracks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</IU:numberOfTracks>
         <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</IU:order>
         <IU:released rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-10-07T00:00:00</IU:released>
@@ -1294,13 +1295,13 @@
 
     <!-- http://localhost:3030/IU#Obliviate_Song -->
 
+
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#Obliviate_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#ModernTimes_ExtendedPlayAlbum"/>
         <IU:numberOfTracks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</IU:numberOfTracks>
     </owl:NamedIndividual>
     
-
 
     <!-- http://localhost:3030/IU#Palette_ExtendedPlayAlbum -->
 
@@ -1622,7 +1623,6 @@
     </owl:NamedIndividual>
     
 
-
     <!-- http://localhost:3030/IU#골든디스크음원대상2018년_MusicAward -->
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#골든디스크음원대상2018년_MusicAward">
@@ -1642,22 +1642,6 @@
     </owl:NamedIndividual>
     
 
-
-<<<<<<< HEAD
-=======
-    <!-- http://localhost:3030/IU#골든디스크음원대상2017년_MusicAward -->
-
-    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#골든디스크음원대상2017년_MusicAward">
-        <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
-        <IU:awardedBy rdf:resource="http://localhost:3030/IU#KoreaMusicContent_Accociation"/>
-        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">골든디스크음원대상</IU:title>
-        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</IU:year>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://localhost:3030/IU#골든디스크음원대상2018년_MusicAward -->
-
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#골든디스크음원대상2018년_MusicAward">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
         <IU:awardedBy rdf:resource="http://localhost:3030/IU#KoreaMusicContent_Accociation"/>
@@ -1676,14 +1660,13 @@
     
 
 
->>>>>>> 30c0ef423f62ffd2fe16879b8675f1f5f1c74ef2
     <!-- http://localhost:3030/IU#그사람_Song -->
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#그사람_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#LovePoem_MiniAlbum"/>
         <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
-        <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</IU:order>
+        <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</IU:order>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">그사람</IU:title>
     </owl:NamedIndividual>
     
@@ -1706,6 +1689,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#금요일에만나요_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+
         <IU:composedBy rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#ModernTimes_ExtendedPlayAlbum"/>
         <IU:producedBy rdf:resource="http://localhost:3030/IU#아이유"/>
@@ -1871,20 +1855,6 @@
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">나의아저씨</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
     </owl:NamedIndividual>
-<<<<<<< HEAD
-=======
-    
-
-
-    <!-- http://localhost:3030/IU#나의옛날이야기_Song -->
-
-    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#나의옛날이야기_Song">
-        <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
-        <IU:isTitleTrackOf rdf:resource="http://localhost:3030/IU#꽃갈피_RemakeAlbum"/>
-        <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</IU:order>
-    </owl:NamedIndividual>
->>>>>>> 30c0ef423f62ffd2fe16879b8675f1f5f1c74ef2
-    
 
 
     <!-- http://localhost:3030/IU#나의옛날이야기_Song -->
@@ -2116,7 +2086,6 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#마음_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
         <IU:composedBy rdf:resource="http://localhost:3030/IU#아이유"/>
-        <IU:creates rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#CHAT-SHIRE_MiniAlbum"/>
         <IU:producedBy rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
@@ -2942,8 +2911,8 @@
     
 
 
-    <!-- http://localhost:3030/IU#잊어야한다는마음으로_MusicVideo -->
 
+    <!-- http://localhost:3030/IU#잊어야한다는마음으로_MusicVideo -->
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#잊어야한다는마음으로_MusicVideo">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicVideo"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#Youtube_StreamingServiceCompany"/>
@@ -3633,4 +3602,3 @@
 
 
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
-
