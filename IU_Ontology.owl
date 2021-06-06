@@ -1032,6 +1032,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#CHAT-SHIRE_MiniAlbum">
         <rdf:type rdf:resource="http://localhost:3030/IU#MiniAlbum"/>
+        <IU:composedBy rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#RedQueen_Song"/>
         <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#Zezé_Song"/>
         <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#마음_Song"/>
@@ -1041,7 +1042,6 @@
         <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#안경_Song"/>
         <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#푸르던_Song"/>
         <IU:producedBy rdf:resource="http://localhost:3030/IU#아이유"/>
-        <IU:composedBy rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:numberOfTracks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</IU:numberOfTracks>
         <IU:released rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-10-27T00:00:00</IU:released>
@@ -1101,6 +1101,18 @@
         <IU:isTitleTrack rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</IU:isTitleTrack>
         <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</IU:order>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coin</IU:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#DEAN -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#DEAN">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Composer"/>
+        <rdf:type rdf:resource="http://localhost:3030/IU#Lyricist"/>
+        <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
+        <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEAN</IU:name>
     </owl:NamedIndividual>
     
 
@@ -2134,7 +2146,9 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#돌림노래_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+        <IU:composedBy rdf:resource="http://localhost:3030/IU#DEAN"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#LILAC_RegularAlbum"/>
+        <IU:writtenBy rdf:resource="http://localhost:3030/IU#DEAN"/>
         <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</IU:order>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">돌림노래 (Feat. DEAN)</IU:title>
@@ -2528,6 +2542,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#빈컵_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+        <IU:arrangedBy rdf:resource="http://localhost:3030/IU#우기"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#LILAC_RegularAlbum"/>
         <IU:producedBy rdf:resource="http://localhost:3030/IU#우기"/>
         <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
@@ -2709,6 +2724,7 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#소리바다_StreamingServiceCompany">
         <rdf:type rdf:resource="http://localhost:3030/IU#StreamingServiceCompany"/>
         <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">소리바다</IU:companyName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">소리바다</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2735,6 +2751,7 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#스무살의봄_SingleAlbum">
         <rdf:type rdf:resource="http://localhost:3030/IU#SingleAlbum"/>
         <IU:numberOfTracks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</IU:numberOfTracks>
+        <IU:released rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-05-12T00:00:00</IU:released>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">스무살의봄</IU:title>
     </owl:NamedIndividual>
     
@@ -2825,6 +2842,18 @@
     
 
 
+    <!-- http://localhost:3030/IU#싸이 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#싸이">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
+        <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:holds rdf:resource="http://localhost:3030/IU#2017년8월싸이흠뻑쇼콘서트_Concert"/>
+        <IU:holds rdf:resource="http://localhost:3030/IU#2018년8월싸이콘서트_Concert"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">싸이</IU:name>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://localhost:3030/IU#아이랜드_Dramawork -->
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#아이랜드_Dramawork">
@@ -2870,6 +2899,8 @@
         <rdf:type rdf:resource="http://localhost:3030/IU#Producer"/>
         <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
         <owl:sameAs rdf:resource="http://localhost:3030/IU#이지금"/>
+        <owl:sameAs rdf:resource="http://localhost:3030/IU#이지동"/>
+        <IU:belongsTo rdf:resource="http://localhost:3030/IU#이담_EntertainmentAgency"/>
         <IU:collaborateWith rdf:resource="http://localhost:3030/IU#김연아"/>
         <IU:collaborateWith rdf:resource="http://localhost:3030/IU#백지영"/>
         <IU:collaborateWith rdf:resource="http://localhost:3030/IU#수호"/>
@@ -3108,6 +3139,8 @@
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</IU:month>
         <IU:record rdf:datatype="http://www.w3.org/2001/XMLSchema#string">여자 솔로 초동 판매량 신기록</IU:record>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</IU:year>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">여자 솔로 초동 판매량 신기록
+아이유는 지난달 18일 발매한 5번째 미니앨범 &apos;러브 포엠(Love poem)&apos;을 통해 여자 솔로 가수 앨범 초동 판매량 신기록을 세우며 음반 강자로 거듭났다. 지난달 19일 공개된 한터차트에 따르면 &apos;러브 포엠&apos;은 발매 1일차에 12만 5000장 이상이 판매됐고 발매 2일차에 13만 4000장을 넘겼다. 앞서 여자 솔로 초동 판매량 최고기록을 보유했던 태연의 정규 2집 &apos;퍼포즈(Purpose)&apos; 13만 2000여 장을 경신한 결과다. 한터차트 월간차트(2019.11.01~2019.11.30) 결과를 보면, &apos;러브 포엠&apos;은 15만 8000장 이상의 판매고를 기록했다. 아이돌 그룹도 앨범 판매량 10만 장을 넘기기 어렵다는 점에서 아이유의 막강한 솔로 파워를 짐작할 수 있다. 음원 강자의 면모도 다시 한번 과시했다. &apos;러브 포엠&apos;과 동명의 선공개곡 &apos;러브 포엠&apos;은 지난달 1일 발표 직후 멜론을 비롯한 각종 음원 차트 1위를 올킬했다. &apos;러브 포엠&apos; 타이틀곡 블루밍(Blueming)&apos; 역시 음원 차트를 석권했고 다른 수록곡들도 차트 줄 세우기에 성공했다.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3135,12 +3168,12 @@
     
 
 
-    <!-- http://localhost:3030/IU#올해의가수1위 -->
+    <!-- http://localhost:3030/IU#올해의가수1위_MusicAward -->
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#올해의가수1위_MusicAward">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
-        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</IU:year>
         <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">올해의가수1위</IU:name>
+        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</IU:year>
     </owl:NamedIndividual>
     
 
@@ -3157,6 +3190,7 @@
     <!-- http://localhost:3030/IU#우기 -->
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#우기">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Arranger"/>
         <rdf:type rdf:resource="http://localhost:3030/IU#Producer"/>
         <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">우기</IU:name>
@@ -3248,6 +3282,15 @@
     
 
 
+    <!-- http://localhost:3030/IU#이담_EntertainmentAgency -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#이담_EntertainmentAgency">
+        <rdf:type rdf:resource="http://localhost:3030/IU#EntertainmentAgency"/>
+        <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">이담엔터테인먼트</IU:companyName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://localhost:3030/IU#이름에게_Song -->
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#이름에게_Song">
@@ -3290,7 +3333,19 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#이지금">
         <rdf:type rdf:resource="http://localhost:3030/IU#Person"/>
         <IU:isSubCharactor rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</IU:isSubCharactor>
-        <rdfs:comment>아이유 부캐</rdfs:comment>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">이지금</IU:name>
+        <rdfs:comment>&apos;이지금&apos;은 아이유의 별명인 동시에 아이유 관련 여러 컨텐츠의 이름이기도 하다. 1인용 동음이의어.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#이지동 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#이지동">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Person"/>
+        <IU:isSubCharactor rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</IU:isSubCharactor>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">이지동</IU:name>
+        <rdfs:comment>2020년 9월 7일 입사한 이담엔터테인먼트의 신입사원이다. 2021년 4월 7일 이지동은 낙하산인것으로 밝혀졌다.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3598,6 +3653,7 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#플로_StreamingServiceCompany">
         <rdf:type rdf:resource="http://localhost:3030/IU#StreamingServiceCompany"/>
         <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flo</IU:companyName>
+        <rdfs:comment>Flo powered by SK telecom</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3870,6 +3926,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2017년8월싸이흠뻑쇼콘서트_Concert">
         <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
+        <IU:heldBy rdf:resource="http://localhost:3030/IU#싸이"/>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</IU:month>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">싸이흠뻑쇼콘서트</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</IU:year>
@@ -3928,6 +3985,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2018년8월싸이콘서트_Concert">
         <rdf:type rdf:resource="http://localhost:3030/IU#Concert"/>
+        <IU:heldBy rdf:resource="http://localhost:3030/IU#싸이"/>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</IU:month>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">싸이콘서트</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
