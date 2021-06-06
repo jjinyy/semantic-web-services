@@ -1,0 +1,1094 @@
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix : <http://localhost:3030/IU#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+#################################################
+# CQ1. 아이유가 2018년 10월에 콘서트를 연 장소는? #######	
+#################################################
+
+SELECT ?location
+WHERE {
+  ?x :year 2018 .
+  ?x :month 10 .
+  ?x rdf:type :Concert .
+  ?x :location ?location .
+  ?x :heldBy :아이유
+}
+
+
+#################################################
+# CQ2. 아이유 2019년 11월 가온차트 상을 받은 곡은? ######
+#################################################	
+
+SELECT ?title
+WHERE {
+  ?y :won ?x .
+  ?y :title ?title
+  {
+    SELECT ?x 
+    WHERE {
+      ?x :year 2019 .
+      ?x :month 11 .
+      ?x rdf:type :MusicAward .
+      ?x :awardedBy ?KoreaMusicContent_Association .
+    }
+  }
+}
+
+
+#################################################
+# CQ3. 아이유가 2019년 11월 발매한 앨범의 선공개곡 은? ###
+#################################################
+
+SELECT ?albumTitle ?songTitle
+WHERE {
+  ?x :title ?albumTitle .
+  ?y :title ?songTitle .
+  ?y rdf:type :Song .
+  ?y :partOf ?x .
+  ?y :preReleased true .
+  {
+    SELECT ?x ?released
+    WHERE {
+      ?x :released ?released .
+      ?x rdf:type/rdfs:subClassOf* :MusicAlbum .
+      FILTER (?released > "2019-11-01T00:00:00"^^xsd:dateTime) .
+      FILTER (?released < "2019-11-30T23:59:59"^^xsd:dateTime)
+    }
+  }
+}
+
+
+#################################################
+# CQ4. Love Poem 미니앨범 수록곡은?         #########
+#################################################
+SELECT ?trackNo ?title
+WHERE {
+ ?x :title ?title .
+ ?x :order ?trackNo .
+ ?x :partOf :LovePoem_MiniAlbum
+}
+ORDER BY ?trackNo
+
+
+#################################################
+# CQ5. 아이유와 성시경이 2019년 발매한 듀엣곡은?    ######
+#################################################
+SELECT ?title
+WHERE {
+  ?x :title ?title .
+  ?x :sungBy :아이유 .
+  ?x :sungBy :성시경 .
+  ?x rdf:type :Song .
+  ?x :released ?released .
+  FILTER (?released > "2019-01-01T00:00:00"^^xsd:dateTime) .
+  FILTER (?released < "2019-12-31T23:59:59"^^xsd:dateTime)
+}
+
+
+#################################################
+# CQ6. 여자 솔로 초동 판매량 신기록을 달성한 앨범은?  ######
+#################################################
+SELECT ?title
+WHERE {
+	?x :title ?title .
+	?x rdf:type/rdfs:subClassOf* :MusicAlbum .
+	?x :records :여자솔로초동판매량신기록_Record
+}
+
+#################################################
+# CQ7. 첫 겨울이니까의 차트 성적은?  ###################
+#################################################
+SELECT ?title ?year ?month ?rank
+WHERE {
+	?x :title ?title .
+	?x :rank ?rank .
+	?x :year ?year .
+	?x :month ?month .
+	?x ^:won :첫겨울이니까_Song
+}
+
+
+
+#################################################
+# CQ8. 2020년 5월 아이튠즈로부터 상을 받은 곡은?  #######
+#################################################
+SELECT ?songTitle ?awardTitle ?description
+WHERE {
+	?x :title ?songTitle .
+	?y :title ?awardTitle .
+	?y rdfs:comment ?description .
+	?x :won ?y
+	{
+		SELECT ?y
+		WHERE {
+			?y :awardedBy :아이튠즈_StreamingServiceCompany .
+			?y :month 5 .
+			?y :year 2020 
+		}
+	}
+}
+
+
+#################################################
+# CQ9. 아이유가 작사한 정승환의 곡은?            #######
+#################################################
+SELECT ?title
+WHERE {
+	?x :title ?title .
+	?x :writtenBy :아이유 .
+	?x :sungBy :정승환
+}
+
+#################################################
+# CQ10. 에잇의 2020년 5월 차트성적은?            #####
+#################################################
+SELECT ?title ?rank
+WHERE {
+	?x :won ?y .
+	?x :title "에잇"^^xsd:string .
+	?y :rank ?rank .
+	?y :title ?title
+	{
+		SELECT ?y
+		{
+			?y rdf:type :MusicAward .
+			?y :month 5 .
+			?y :year 2020
+		}
+	}
+}
+
+
+#################################################
+# CQ11. GOD와 아이유가 협업한 곡은?               #####
+#################################################
+SELECT ?title
+WHERE {
+	?y :sungBy ?x .
+	?y :title ?title .
+	?x :collaborateWith :아이유 .
+	{
+	SELECT ?x
+		WHERE {
+			?x :name "GOD"^^xsd:string
+		}
+	}
+}
+
+
+#################################################
+# CQ12. 2020년 10월 아이유와 스윗소로우가 협업한 곡은? ###
+#################################################
+SELECT ?title
+WHERE {
+	?y :sungBy ?x .
+	?y :title ?title .
+	?y :sungBy :아이유 .
+	?y :released ?released .
+	 FILTER (?released > "2020-10-01T00:00:00"^^xsd:dateTime) .
+      	FILTER (?released < "2020-10-30T23:59:59"^^xsd:dateTime) .
+	?x :collaborateWith :아이유 .
+	{
+	SELECT ?x
+		WHERE {
+			?x :name "스윗소로우"^^xsd:string
+		}
+	}
+}
+
+
+#################################################
+# CQ13. 방시혁이 프로듀 싱한 아일랜드 시그널 송은?  ########
+#################################################
+SELECT ?title ?dramaTitle ?dramaDesc
+WHERE
+{
+	?y :isOrignalSoundTrackOf ?x .
+	?y :producedBy :방시혁 .
+	?y rdf:type :Song .
+	?y :title ?title .
+	?x :title ?dramaTitle .
+	?x rdfs:comment ?dramaDesc .
+	{
+		SELECT ?x
+		WHERE {
+			?x rdf:type/rdfs:subClassOf* :ScreenWork .
+			?x :title "아이랜드"^^xsd:string
+		}
+	}
+}
+
+#################################################
+# CQ14. 정규 5집 선공개곡은?    ######################
+#################################################
+SELECT ?title
+WHERE {
+	?x :title ?title .
+	?x :partOf ?y .
+	?x rdf:type :Song .
+	?x :preReleased true .
+	{
+		SELECT ?y
+		WHERE {
+			?y rdf:type :ExtendedPlayAlbum .
+			?y :order 5 .
+		}
+	}
+}
+
+
+#################################################
+# CQ14. 정규 5집 발매일은?    ######################
+#################################################
+SELECT ?released
+WHERE {
+  ?y :released ?released .
+  ?y rdf:type :ExtendedPlayAlbum .
+  ?y :order 5 .
+}
+
+
+#################################################
+# CQ15. 정규 5집 앨범 수록곡은?    ###################
+#################################################
+SELECT ?title
+WHERE {
+	?x :title ?title .
+	?x :partOf ?y .
+	?x rdf:type :Song .
+	{
+		SELECT ?y
+		WHERE {
+			?y rdf:type :ExtendedPlayAlbum .
+			?y :order 5 .
+		}
+	}
+}
+
+
+#################################################
+# CQ15. 이찬혁이 작곡한 곡은?    ###################
+#################################################
+SELECT ?title
+WHERE {
+	?x :title ?title .
+	?x :composedBy ?y .
+	{
+		SELECT ?y
+		WHERE {
+			?y rdf:type :Composer .
+			?y :name "이찬혁"^^xsd:string.
+		}
+	}
+}
+
+
+
+#################################################
+# CQ16. 아이유와 콜라보레이션 한 아티스트들의 이름은?    ###
+#################################################
+SELECT ?name
+WHERE {
+	?x :name ?name .
+	?x rdf:type/rdfs:subClassOf* :MusicArtist .
+	?x :collaborateWith | ^:collaborateWith :아이유
+}
+
+
+#################################################
+# CQ17. 나얼이 작곡한 곡은?    ######################
+#################################################
+SELECT ?title
+WHERE {
+	?x :title ?title .
+	?x :composedBy ?y .
+	{
+		SELECT ?y
+		WHERE {
+			?y :name "나얼"^^xsd:string  .
+			?y rdf:type :Composer .
+			?y :collaborateWith :아이유
+		}
+	}
+}
+
+
+
+#################################################
+# CQ18. 타짜 김윤석이 출연한 뮤직비디오는?    ###########
+#################################################
+
+SELECT ?title
+WHERE {
+	?x :title ?title .
+	?y :participatesIn ?x .
+	?x rdf:type :MusicVideo .
+	{
+		SELECT ?y
+		WHERE {
+			?y rdf:type/rdfs:subClassOf* :Artist .
+			?y :name "김윤석"^^xsd:string .
+			?y :collaborateWith :아이유
+		}
+	}
+}
+
+
+#################################################
+# CQ19. 우기가 프로듀싱한 곡은?    ###################
+#################################################
+
+SELECT ?title
+WHERE {
+	?x :title ?title .
+	?x :producedBy ?y .
+	{
+		SELECT ?y
+		WHERE {
+			?y :name "우기"^^xsd:string  .
+			?y rdf:type :Producer .
+			?y :collaborateWith :아이유
+		}
+	}
+}
+
+#################################################
+# CQ20. 라일락의 2021년 4월 KBS 순위는?   ############
+#################################################
+SELECT ?title ?rank
+	WHERE {
+		?y :title ?title .
+		?y :rank ?rank .
+		?y :month 4 .
+		?y :year 2021 .
+		?y ^:won ?z .
+		?y :awardedBy ?x
+		{
+			SELECT ?z
+			WHERE {
+				?z rdf:type :Song .
+				?z :title"라일락"^^xsd:string
+			}
+		}
+		{
+			SELECT ?x
+			WHERE {
+				?x rdf:type :BroadcastingCompany .
+				?x :companyName "KBS"^^xsd:string
+			}
+		}
+		
+	}	
+
+
+
+###########################################################################
+#2016년에쓴 자작곡 이름은?
+###########################################################################
+SELECT ?songTitle
+WHERE {
+  ?x :title ?songTitle .
+  ?x rdf:type :Song .
+  ?x :year 2016 .
+  ?x :composedBy ?아이유 .
+  ?x :writtenBy ?아이유 .	
+}
+###########################################################################
+#2016년 콘서트 진행한 도시는?
+###########################################################################
+SELECT ?location
+WHERE {
+  ?x :year 2016 .
+  ?x rdf:type :Concert .
+  ?x :location ?location .
+  ?x :heldBy ?아이유
+}
+###########################################################################
+#멜론차트에서 매년 아이유의 봄노래는?
+###########################################################################
+SELECT ?songName
+WHERE {
+  ?x :title ?songName .
+  ?x :won ?streamingCompany .
+  ?x :genre ?genre_ .
+  filter regex(str(?streamingCompany),'멜론') .
+  filter regex(str(?genre_),'봄') .
+}
+###########################################################################
+#2016년도 아이유가 참여한 콘서트는?
+###########################################################################
+select ?concertName
+where{
+  ?x :title ?concertName .
+  ?x :year 2016 .
+  ?x rdf:type :Concert .
+  ?x ^:participatesIn ?아이유 .
+}
+###########################################################################
+#꽃갈피둘 앨범에 참여한 가수들은?
+###########################################################################
+select ?singerName
+where{
+  ?x :name ?singerName .
+  ?x :participatesIn ?Album .
+ filter regex(str(?Album),'꽃갈피둘') .
+}
+###########################################################################
+#아이유의 선공개 곡은?
+###########################################################################
+SELECT ?songName
+WHERE {
+  ?x :title ?songName .
+  ?x :preReleased true .
+}
+###########################################################################
+#2017년도 콘서트를 한 도시는?
+###########################################################################
+SELECT ?location
+WHERE {
+  ?x :year 2017 .
+  ?x rdf:type :Concert .
+  ?x :location ?location .
+  ?x :heldBy ?아이유
+}
+###########################################################################	
+#팔레트로 수상한 상 내역은?
+###########################################################################
+SELECT ?songName ?songAward
+WHERE {
+  ?x :title ?songName .
+  ?x :won ?songAward.
+  filter regex(str(?songName),'팔레트') .
+}
+###########################################################################	
+#2017년도에 수상한 상들은?
+###########################################################################	
+SELECT distinct?songAward
+WHERE { 
+?x :title ?songAward .
+?x :year 2017 .
+?x :awardedBy ?companyName .
+}
+###########################################################################	
+#2017년도에 작사한 곡은?
+###########################################################################	
+SELECT ?songName
+WHERE {
+  ?x :year 2017 .
+  ?x :title ?songName .
+  ?x rdf:type :Song .
+  ?x :writtenBy ?아이유
+}
+###########################################################################	
+#2017년에 아이유가 참여한 콘서트의 가수는?
+###########################################################################	
+select ?concertName
+where{
+  ?x :title ?concertName .
+  ?x :year 2017 .
+  ?x rdf:type :Concert .
+ ?x ^:participatesIn ?아이유 .
+}
+###########################################################################	
+#밤편지 노래로 수상한 상은?
+###########################################################################	
+select ?songName ?songAward
+where{
+?x :title ?songName .
+?x :won ?songAward .
+filter regex(str(?songName),'밤편지')
+}
+###########################################################################	
+#아이유 유튜브뮤직비디오 조회순위는?
+###########################################################################	
+SELECT ?MVName ?Rank
+WHERE {
+  ?y :won ?x .
+ ?y :rank ?Rank .
+  ?y :title ?MVName
+  {
+    SELECT ?x 
+    WHERE {
+      ?x rdf:type :Record .
+      ?x :awardedBy ?Youtube_StreamingServiceCompany .
+    }
+  }
+}order by ?Rank
+###########################################################################	
+#유튜브를 통해 공개한 뮤직비디오곡이름은?
+###########################################################################	
+SELECT ?mvName
+WHERE {
+  ?x :title ?mvName .
+  ?x :partOf ?streamingCompany .
+  filter regex(str(?streamingCompany),'Youtube') .
+}
+###########################################################################	
+#나의아저씨OST에서 작사한 곡은?
+###########################################################################	
+select ?songName
+where{
+ ?x :title ?songName .
+ ?x :writtenBy ?아이유 .
+ ?x :isOrignalSoundTrackOf ?나의아저씨_DramaWork .
+}
+
+###########################################################################	
+#2018년 가온차트뮤직어워드에서 수상한 내역은?
+###########################################################################	
+SELECT ?awardName
+WHERE {
+  ?x :title ?awardName .
+  ?x :year 2018 .
+ filter regex(str(?awardName),'가온')
+}
+###########################################################################	
+#2018년에 아이유가 참여한 콘서트의 가수는?
+###########################################################################	
+select ?concertName
+where{
+  ?x :title ?concertName .
+  ?x :year 2018 .
+  ?x rdf:type :Concert .
+  ?x ^:participatesIn ?아이유 .
+}
+###########################################################################	
+#선우정아와 관련된 곡은?
+###########################################################################	
+select ?songName ?origSinger
+where{
+ ?x :title ?songName .
+ ?x :collaborateWith ?아이유 .
+ ?x :creates ?origSinger .
+ filter regex(str(?origSinger),'선우정아') .
+}
+###########################################################################	
+#지코앨범에 참여한 곡은?
+###########################################################################	
+select ?songName ?origSinger
+where{
+  ?x :title ?songName .
+?x :collaborateWith ?아이유 .
+ ?x :creates ?origSinger .
+filter regex(str(?origSinger),'지코') .
+}
+###########################################################################	
+#김동률 앨범에 참여한 곡은?
+###########################################################################	
+select ?songName ?origSinger
+where{
+  ?x :title ?songName .
+?x :collaborateWith ?아이유 .
+ ?x :creates ?origSinger .
+filter regex(str(?origSinger),'김동률') .
+}
+
+  
+
+################################################# 
+# CQ1. 세번째 정규앨범의 타이틀곡은?	 
+################################################# 
+
+  
+SELECT ?song 
+WHERE{ 
+  ?x :title ?song . 
+  ?x :isTitleTrackOf ?Album . 
+FILTER regex(str(?Album),'ModernTimes') . 
+  ?x :isTitleTrack ?true . 
+  }
+  
+
+################################################# 
+# CQ2. 아이유와 '봄사랑벚꽃말고'를 콜라보레이션 한 가수는? 
+#################################################	 
+
+ 
+SELECT ?singerName 
+WHERE{ 
+  ?x :name ?singerName . 
+  ?x :collaborateWith ?Singer . 
+FILTER regex(str(?Singer),'아이유') . 
+  ?x :Sing ?Song . 
+FILTER regex(str(?Song),'봄사랑벚꽃말고') . 
+  }
+  
+
+################################################# 
+# CQ3. 아이유와 '너의 의미'를 콜라보레이션 한 가수는? 
+################################################# 
+
+  
+SELECT ?singerName 
+WHERE{ 
+  ?x :name ?singerName . 
+  ?x :collaborateWith ?Singer . 
+FILTER regex(str(?Singer),'아이유') . 
+  ?x :Sing ?Song . 
+FILTER regex(str(?Song),'너의의미') . 
+  }
+
+
+################################################# 
+# CQ4. 세번째 정규앨범이 발매된 년도는? 
+################################################# 
+
+SELECT ?result 
+WHERE { 
+?x :year ?result . 
+?x rdf:type :ExtendedPlayAlbum . 
+?x :order 3 . 
+  }
+  
+
+################################################# 
+# CQ5. 아이유가 프로듀싱하고 2015년 발매된 미니앨범의 수록곡수는? 
+################################################# 
+
+ 
+SELECT ?result 
+WHERE { 
+?x :producedBy ?아이유 . 
+?x rdf:type :MiniAlbum . 
+?x :numberOfTracks ?result . 
+?x :year ?2015 . 
+  }
+  
+  
+################################################# 
+# CQ6. 2015년 발매한 미니앨범의 프로듀서는? 
+################################################# 
+
+
+SELECT ?result 
+WHERE { 
+?x :producedBy ?result . 
+?x rdf:type :MiniAlbum . 
+?x :year ?2015 . 
+  }
+ 
+
+################################################# 
+# CQ7. 2015년 아이유가 프로듀싱한 곡 이름은? 
+################################################ 
+
+  
+SELECT ?result 
+WHERE{ 
+?x rdf:type :Song . 
+  ?x :title ?result . 
+  ?x :year ?2015 . 
+  ?x :producedBy ?Singer . 
+FILTER regex(str(?Singer),'아이유') . 
+  }
+
+  
+################################################# 
+# CQ8. 곡 '마음'이 발매된 시기는? 
+################################################# 
+
+  
+SELECT ?result 
+WHERE{ 
+  ?x :title ?Song . 
+FILTER regex(str(?Song),'마음') . 
+ ?x rdf:type :Song . 
+  ?x :released ?result . 
+  }
+ 
+
+################################################# 
+# CQ9. 세번째 정규음반의 트랙의 갯수는? 
+################################################# 
+
+  
+SELECT ?result 
+WHERE { 
+?x :numberOfTracks ?result . 
+?x rdf:type :ExtendedPlayAlbum . 
+?x :order 3 . 
+  }
+
+
+################################################# 
+# CQ10. 모던타임즈에 수록된 곡중에 아이유가 작곡한 노래는? 
+################################################# 
+
+ 
+SELECT ?result 
+WHERE{ 
+  ?x :partOf ?Album . 
+FILTER regex(str(?Album),'ModernTimes') . 
+  ?x :composedBy ?PD . 
+FILTER regex(str(?PD),'아이유') . 
+?x rdf:type :Song . 
+  ?x :title ?result . 
+  }
+
+################################################# 
+# CQ11. 2013년에 발매한 정규앨범의 수록곡은? 
+################################################# 
+
+  
+SELECT ?result 
+WHERE { 
+?x :hasTrackOf ?result . 
+?x rdf:type :ExtendedPlayAlbum . 
+?x :year 2013 . 
+  }
+
+
+################################################# 
+# CQ12. Can yoy hear me의 타이틀곡은? 
+################################################# 
+
+
+SELECT ?result 
+WHERE { 
+  ?x :isTitleTrackOf ?Album . 
+FILTER regex(str(?Album),'CanYouHearMe') .  
+?x rdf:type :Song . 
+?x :title ?result . 
+?x :isTitleTrackOf ?true . 
+  }
+
+
+################################################# 
+# CQ13. 아이유가 '소격동'을 콜라보레이션 한 가수는? 
+################################################# 
+
+
+SELECT ?result 
+WHERE{ 
+  ?x :collaborateWith ?Singer . 
+FILTER regex(str(?Singer),'아이유') .  
+?x :Sing ?Song . 
+FILTER regex(str(?Song),'소격동') . 
+?x rdf:type :Singer . 
+  ?x :name ?result . 
+  }
+
+
+################################################# 
+# CQ14. 아이유와 레옹을 부른 사람는? 
+################################################# 
+
+
+SELECT ?result 
+WHERE{ 
+  ?x :collaborateWith ?Singer . 
+FILTER regex(str(?Singer),'아이유') .  
+  ?x :Sing ?Song . 
+FILTER regex(str(?Song),'레옹') .  
+?x rdf:type :Singer . 
+  ?x :name ?result . 
+  }
+  
+
+################################################# 
+# CQ15. 올해의 가수 1위를 수상한 년도는? 
+################################################# 
+  
+SELECT ?result 
+WHERE{ 
+  ?x :name ?Award . 
+FILTER regex(str(?Award),'올해의가수1위') .  
+?x rdf:type :MusicAward . 
+  ?x :year ?result . 
+  }
+  
+################################################# 
+# CQ16. 챗셔 수록곡중 아이유가 작사, 작곡한 노래는? 
+################################################# 
+  
+SELECT ?result 
+WHERE{ 
+  ?x :partOf?Album . 
+FILTER regex(str(?Album),'CHAT-SHIRE') . 
+  ?x :writtenBy?Lyricist . 
+FILTER regex(str(?Lyricist),'아이유') . 
+  ?x :composedBy?composer . 
+FILTER regex(str(?composer),'아이유') . 
+?x rdf:type :Song . 
+?x :title ?result . 
+  }
+  
+################################################# 
+# CQ17. 첫번째 리메이크 앨범에 수록된 곡은? 
+################################################# 
+  
+SELECT ?result 
+WHERE { 
+?x :hasTrackOf ?result . 
+?x rdf:type :RemakeAlbum . 
+?x :order 1 . 
+  }
+  
+################################################# 
+# CQ18. 챗-셔에 수록된 첫번째 곡의 작곡가는? 
+################################################# 
+  
+SELECT ?result 
+WHERE{ 
+  ?x :partOf?Album . 
+FILTER regex(str(?Album),'CHAT-SHIRE') . 
+?x rdf:type :Song . 
+?x :order ?1. 
+?x :composedBy ?result. 
+  }
+  
+################################################# 
+# CQ19. 아이유와 콜라보레이션 한 가수들은? 
+################################################# 
+  
+SELECT ?result 
+WHERE{ 
+  ?x :collaborateWith?Singer . 
+FILTER regex(str(?Singer),'아이유') . 
+?x rdf:type :Singer . 
+?x :name ?result. 
+  }
+  
+################################################# 
+# CQ20. 분홍신이 수록되어있는 정규앨범의 장르는? 
+################################################# 
+  
+SELECT ?result 
+WHERE{ 
+  ?x :hasTrackOf?Song . 
+FILTER regex(str(?Song),'분홍신') . 
+?x rdf:type :ExtendedPlayAlbum . 
+?x :genre ?result. 
+  }
+
+
+###########################################################################
+#1.미아가 수록된 앨범은?
+###########################################################################
+SELECT ?partOf
+WHERE {
+    ?x :partOf ?partOf .
+    ?x rdf:type :Song .
+    ?x :title ?"미아" .
+}
+
+###########################################################################
+#2.아이유의 데뷔곡이 수록된 앨범은?
+###########################################################################
+SELECT ?y
+WHERE {
+  ?y rdf:type/rdfs:subClassOf* :MusicAlbum .
+  ?y :hasTrackOf ?x .
+  {
+    SELECT ?x
+    WHERE {
+     ?x rdf:type :Song .
+     ?x :debutSongOf ?아이유 .
+    }
+  }
+}
+
+###########################################################################
+#3.로스트 & 파운드 앨범의 프로듀서는?
+###########################################################################
+SELECT ?result
+WHERE {
+ ?x :producedBy ?result .
+ ?x rdf:type :MiniAlbum .
+ ?x :order 1 .
+}
+
+###########################################################################
+#4.아이유의 데뷔곡은?
+###########################################################################
+SELECT ?result
+WHERE {
+ ?x :title ?result .
+ ?x rdf:type :Song .
+ ?x :debutSongOf ?아이유 .
+}
+
+###########################################################################
+#5.부가 수록된 앨범제목은?
+###########################################################################
+SELECT ?result
+WHERE {
+    ?y :title ?result .
+    ?y rdf:type/rdfs:subClassOf* :MusicAlbum .
+    ?y :hasTrackOf ?x .
+    {
+        SELECT ?x
+        WHERE {
+            ?x rdf:type :Song .
+            ?x :title ?"부" .
+        }
+    }
+}
+
+###########################################################################
+#6.아이유 1집 Growing Up은 2009년 발매했다.
+###########################################################################
+SELECT ?result
+WHERE {
+    ?x :title ?result .
+    ?x rdf:type/rdfs:subClassOf* :MusicAlbum .
+    ?x :year 2009 .
+}
+
+###########################################################################
+#7.미니앨범 2집의 총 재생시간은?
+###########################################################################
+SELECT ?time
+WHERE {
+ ?x :runningTime ?time .
+ ?x rdf:type :MiniAlbum .
+ ?x :order 2 .
+}
+
+###########################################################################	
+#8.마쉬멜로우는 뮤직비디오를 제작했다.
+###########################################################################
+SELECT ?x
+WHERE {
+ ?x rdf:type :MusicVideo .
+ ?x :expressFor ?마쉬멜로우_Song .
+}
+
+###########################################################################	
+#9.두번째 미니앨범의 수록곡 장르 목록은?
+###########################################################################	
+SELECT ?genre
+WHERE {
+  ?y :genre ?genre .
+  ?y :title ?title .
+  ?y rdf:type :Song .
+  ?y :partOf ?x .
+  {
+    SELECT ?x
+    WHERE {
+    ?x rdf:type :MiniAlbum .
+    ?x :order 2 .
+    }
+  }
+}
+GROUP BY ?genre
+
+###########################################################################	
+#10.REAL의 발매일자는?
+###########################################################################	
+SELECT ?result
+WHERE {
+    ?x :released ?result .
+    ?x rdf:type :MiniAlbum .
+    ?x :order 3 .
+}
+
+###########################################################################	
+#11.서울에서 열린 아이유의 콘서트는?
+###########################################################################	
+SELECT ?x
+WHERE {
+ ?x rdf:type :Concert .
+ ?x :location ?"서울" .
+}
+
+###########################################################################	
+#12.나만 몰랐던 이야기가 수록된 앨범 제목은?
+###########################################################################	
+SELECT ?result
+WHERE {
+    ?y :title ?result .
+    ?y rdf:type/rdfs:subClassOf* :MusicAlbum .
+    ?y :hasTrackOf ?x .
+    {
+        SELECT ?x
+        WHERE {
+            ?x rdf:type :Song .
+            ?x :title ?"나만몰랐던이야기" .
+        }
+    }
+}
+
+###########################################################################	
+#13.나만 몰랐던 이야기의 작사, 작곡가 이름은?
+###########################################################################	
+SELECT ?result1 ?result2
+WHERE {
+ ?x :writtenBy ?result1 .
+ ?x :composedBy ?result2 .
+ ?x rdf:type :Song .
+ ?x :title ?"나만몰랐던이야기" .
+}
+
+###########################################################################	
+#14.너랑 나의 작사, 작곡가 이름은?
+###########################################################################	
+SELECT ?result1 ?result2
+WHERE {
+ ?x :writtenBy ?result1 .
+ ?x :composedBy ?result2 .
+ ?x rdf:type :Song .
+ ?x :title ?"너랑나" .
+}
+
+###########################################################################	
+#15.정규 2집의 수록곡 목록은?
+###########################################################################	
+SELECT ?result
+WHERE {
+ ?x :hasTrackOf ?result .
+ ?x rdf:type :ExtendedPlayAlbum .
+ ?x :order ?2 .
+}
+
+###########################################################################	
+#16.정규 2집의 수록곡은 총 몇곡인가?
+###########################################################################	
+SELECT ?result
+WHERE {
+ ?x :numberOfTracks ?result .
+ ?x rdf:type :ExtendedPlayAlbum .
+ ?x :order 2 .
+}
+
+###########################################################################	
+#17.두번째 정규앨범 제목은?
+###########################################################################	
+SELECT ?result
+WHERE {
+ ?x :title ?result .
+ ?x rdf:type :ExtendedPlayAlbum .
+ ?x :order 2 .
+}
+
+###########################################################################	
+#18.너랑 나의 수상 내역은?
+###########################################################################	
+SELECT ?won
+WHERE {
+    ?x :won ?won .
+    ?x rdf:type :Song .
+    ?x :title ?"너랑나" .
+}
+
+###########################################################################	
+#19. 스무살의 봄 싱글앨범의 총 수록곡 수는?
+###########################################################################	
+SELECT ?x ?count
+WHERE {
+  ?x :numberOfTracks ?count .
+  ?x rdf:type :SingleAlbum .
+}
+
+###########################################################################	
+#20.성시경과 콜레보레이션한 가수 이름은?
+###########################################################################	
+SELECT ?result
+WHERE {
+ ?x :collaborateWith ?result .
+ ?x rdf:type :Singer .
+ ?x :name "성시경" .
+}

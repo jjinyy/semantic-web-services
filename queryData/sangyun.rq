@@ -1,7 +1,7 @@
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-prefix iu:<http://localhost:3030/IU#>
+prefix :<http://localhost:3030/IU#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX ref: <http://purl.org/vocab/relationship/>
 PREFIX ui: <http://www.w3.org/ns/ui#>
@@ -11,9 +11,9 @@ PREFIX ui: <http://www.w3.org/ns/ui#>
 ###########################################################################
 SELECT ?partOf
 WHERE {
-    ?x iu:partOf ?partOf .
-    ?x rdf:type iu:Song .
-    ?x iu:title ?"미아" .
+    ?x :partOf ?partOf .
+    ?x rdf:type :Song .
+    ?x :title ?"미아" .
 }
 
 ###########################################################################
@@ -21,13 +21,13 @@ WHERE {
 ###########################################################################
 SELECT ?y
 WHERE {
-  ?y rdf:type/rdfs:subClassOf* iu:MusicAlbum .
-  ?y iu:hasTrackOf ?x .
+  ?y rdf:type/rdfs:subClassOf* :MusicAlbum .
+  ?y :hasTrackOf ?x .
   {
     SELECT ?x
     WHERE {
-     ?x rdf:type iu:Song .
-     ?x iu:debutSongOf ?아이유 .
+     ?x rdf:type :Song .
+     ?x :debutSongOf ?아이유 .
     }
   }
 }
@@ -37,9 +37,9 @@ WHERE {
 ###########################################################################
 SELECT ?result
 WHERE {
- ?x iu:producedBy ?result .
- ?x rdf:type iu:MiniAlbum .
- ?x iu:order 1 .
+ ?x :producedBy ?result .
+ ?x rdf:type :MiniAlbum .
+ ?x :order 1 .
 }
 
 ###########################################################################
@@ -47,9 +47,9 @@ WHERE {
 ###########################################################################
 SELECT ?result
 WHERE {
- ?x iu:title ?result .
- ?x rdf:type iu:Song .
- ?x iu:debutSongOf ?아이유 .
+ ?x :title ?result .
+ ?x rdf:type :Song .
+ ?x :debutSongOf ?아이유 .
 }
 
 ###########################################################################
@@ -57,14 +57,14 @@ WHERE {
 ###########################################################################
 SELECT ?result
 WHERE {
-    ?y iu:title ?result .
-    ?y rdf:type/rdfs:subClassOf* iu:MusicAlbum .
-    ?y iu:hasTrackOf ?x .
+    ?y :title ?result .
+    ?y rdf:type/rdfs:subClassOf* :MusicAlbum .
+    ?y :hasTrackOf ?x .
     {
         SELECT ?x
         WHERE {
-            ?x rdf:type iu:Song .
-            ?x iu:title ?"부" .
+            ?x rdf:type :Song .
+            ?x :title ?"부" .
         }
     }
 }
@@ -74,9 +74,9 @@ WHERE {
 ###########################################################################
 SELECT ?result
 WHERE {
-    ?x iu:title ?result .
-    ?x rdf:type/rdfs:subClassOf* iu:MusicAlbum .
-    ?x iu:year 2009 .
+    ?x :title ?result .
+    ?x rdf:type/rdfs:subClassOf* :MusicAlbum .
+    ?x :year 2009 .
 }
 
 ###########################################################################
@@ -84,9 +84,9 @@ WHERE {
 ###########################################################################
 SELECT ?time
 WHERE {
- ?x iu:runningTime ?time .
- ?x rdf:type iu:MiniAlbum .
- ?x iu:order 2 .
+ ?x :runningTime ?time .
+ ?x rdf:type :MiniAlbum .
+ ?x :order 2 .
 }
 
 ###########################################################################	
@@ -94,8 +94,8 @@ WHERE {
 ###########################################################################
 SELECT ?x
 WHERE {
- ?x rdf:type iu:MusicVideo .
- ?x iu:expressFor ?마쉬멜로우_Song .
+ ?x rdf:type :MusicVideo .
+ ?x :expressFor ?마쉬멜로우_Song .
 }
 
 ###########################################################################	
@@ -103,15 +103,15 @@ WHERE {
 ###########################################################################	
 SELECT ?genre
 WHERE {
-  ?y iu:genre ?genre .
-  ?y iu:title ?title .
-  ?y rdf:type iu:Song .
-  ?y iu:partOf ?x .
+  ?y :genre ?genre .
+  ?y :title ?title .
+  ?y rdf:type :Song .
+  ?y :partOf ?x .
   {
     SELECT ?x
     WHERE {
-    ?x rdf:type iu:MiniAlbum .
-    ?x iu:order 2 .
+    ?x rdf:type :MiniAlbum .
+    ?x :order 2 .
     }
   }
 }
@@ -122,9 +122,9 @@ GROUP BY ?genre
 ###########################################################################	
 SELECT ?result
 WHERE {
-    ?x iu:released ?result .
-    ?x rdf:type iu:MiniAlbum .
-    ?x iu:order 3 .
+    ?x :released ?result .
+    ?x rdf:type :MiniAlbum .
+    ?x :order 3 .
 }
 
 ###########################################################################	
@@ -132,8 +132,8 @@ WHERE {
 ###########################################################################	
 SELECT ?x
 WHERE {
- ?x rdf:type iu:Concert .
- ?x iu:location ?"서울" .
+ ?x rdf:type :Concert .
+ ?x :location ?"서울" .
 }
 
 ###########################################################################	
@@ -141,14 +141,14 @@ WHERE {
 ###########################################################################	
 SELECT ?result
 WHERE {
-    ?y iu:title ?result .
-    ?y rdf:type/rdfs:subClassOf* iu:MusicAlbum .
-    ?y iu:hasTrackOf ?x .
+    ?y :title ?result .
+    ?y rdf:type/rdfs:subClassOf* :MusicAlbum .
+    ?y :hasTrackOf ?x .
     {
         SELECT ?x
         WHERE {
-            ?x rdf:type iu:Song .
-            ?x iu:title ?"나만몰랐던이야기" .
+            ?x rdf:type :Song .
+            ?x :title ?"나만몰랐던이야기" .
         }
     }
 }
@@ -158,10 +158,10 @@ WHERE {
 ###########################################################################	
 SELECT ?result1 ?result2
 WHERE {
- ?x iu:writtenBy ?result1 .
- ?x iu:composedBy ?result2 .
- ?x rdf:type iu:Song .
- ?x iu:title ?"나만몰랐던이야기" .
+ ?x :writtenBy ?result1 .
+ ?x :composedBy ?result2 .
+ ?x rdf:type :Song .
+ ?x :title ?"나만몰랐던이야기" .
 }
 
 ###########################################################################	
@@ -169,10 +169,10 @@ WHERE {
 ###########################################################################	
 SELECT ?result1 ?result2
 WHERE {
- ?x iu:writtenBy ?result1 .
- ?x iu:composedBy ?result2 .
- ?x rdf:type iu:Song .
- ?x iu:title ?"너랑나" .
+ ?x :writtenBy ?result1 .
+ ?x :composedBy ?result2 .
+ ?x rdf:type :Song .
+ ?x :title ?"너랑나" .
 }
 
 ###########################################################################	
@@ -180,9 +180,9 @@ WHERE {
 ###########################################################################	
 SELECT ?result
 WHERE {
- ?x iu:hasTrackOf ?result .
- ?x rdf:type iu:ExtendedPlayAlbum .
- ?x iu:order ?2 .
+ ?x :hasTrackOf ?result .
+ ?x rdf:type :ExtendedPlayAlbum .
+ ?x :order ?2 .
 }
 
 ###########################################################################	
@@ -190,9 +190,9 @@ WHERE {
 ###########################################################################	
 SELECT ?result
 WHERE {
- ?x iu:numberOfTracks ?result .
- ?x rdf:type iu:ExtendedPlayAlbum .
- ?x iu:order 2 .
+ ?x :numberOfTracks ?result .
+ ?x rdf:type :ExtendedPlayAlbum .
+ ?x :order 2 .
 }
 
 ###########################################################################	
@@ -200,9 +200,9 @@ WHERE {
 ###########################################################################	
 SELECT ?result
 WHERE {
- ?x iu:title ?result .
- ?x rdf:type iu:ExtendedPlayAlbum .
- ?x iu:order 2 .
+ ?x :title ?result .
+ ?x rdf:type :ExtendedPlayAlbum .
+ ?x :order 2 .
 }
 
 ###########################################################################	
@@ -210,9 +210,9 @@ WHERE {
 ###########################################################################	
 SELECT ?won
 WHERE {
-    ?x iu:won ?won .
-    ?x rdf:type iu:Song .
-    ?x iu:title ?"너랑나" .
+    ?x :won ?won .
+    ?x rdf:type :Song .
+    ?x :title ?"너랑나" .
 }
 
 ###########################################################################	
@@ -220,8 +220,8 @@ WHERE {
 ###########################################################################	
 SELECT ?x ?count
 WHERE {
-  ?x iu:numberOfTracks ?count .
-  ?x rdf:type iu:SingleAlbum .
+  ?x :numberOfTracks ?count .
+  ?x rdf:type :SingleAlbum .
 }
 
 ###########################################################################	
@@ -229,7 +229,7 @@ WHERE {
 ###########################################################################	
 SELECT ?result
 WHERE {
- ?x iu:collaborateWith ?result .
- ?x rdf:type iu:Singer .
- ?x iu:name "성시경" .
+ ?x :collaborateWith ?result .
+ ?x rdf:type :Singer .
+ ?x :name "성시경" .
 }
