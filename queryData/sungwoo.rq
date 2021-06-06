@@ -2,7 +2,7 @@ prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix : <http://localhost:3030/IU#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 #################################################
 # CQ1. 아이유가 2018년 10월에 콘서트를 연 장소는? #######	
@@ -39,7 +39,7 @@ WHERE {
 
 
 #################################################
-# CQ2. 아이유가 2019년 11월 발매한 앨범의 선공개곡 은? ###
+# CQ3. 아이유가 2019년 11월 발매한 앨범의 선공개곡 은? ###
 #################################################
 
 SELECT ?albumTitle ?songTitle
@@ -58,4 +58,165 @@ WHERE {
       FILTER (?released < "2019-11-30T23:59:59"^^xsd:dateTime)
     }
   }
+}
+
+
+#################################################
+# CQ4. Love Poem 미니앨범 수록곡은?         #########
+#################################################
+SELECT ?trackNo ?title
+WHERE {
+ ?x :title ?title .
+ ?x :order ?trackNo .
+ ?x :partOf :LovePoem_MiniAlbum
+}
+ORDER BY ?trackNo
+
+
+#################################################
+# CQ5. 아이유와 성시경이 2019년 발매한 듀엣곡은?    ######
+#################################################
+SELECT ?title
+WHERE {
+  ?x :title ?title .
+  ?x :sungBy :아이유 .
+  ?x :sungBy :성시경 .
+  ?x rdf:type :Song .
+  ?x :released ?released .
+  FILTER (?released > "2019-01-01T00:00:00"^^xsd:dateTime) .
+  FILTER (?released < "2019-12-31T23:59:59"^^xsd:dateTime)
+}
+
+
+#################################################
+# CQ6. 여자 솔로 초동 판매량 신기록을 달성한 앨범은?  ######
+#################################################
+SELECT ?title
+WHERE {
+	?x :title ?title .
+	?x rdf:type/rdfs:subClassOf* :MusicAlbum .
+	?x :records :여자솔로초동판매량신기록_Record
+}
+
+#################################################
+# CQ7. 첫 겨울이니까의 차트 성적은?  ###################
+#################################################
+SELECT ?title ?year ?month ?rank
+WHERE {
+	?x :title ?title .
+	?x :rank ?rank .
+	?x :year ?year .
+	?x :month ?month .
+	?x ^:won :첫겨울이니까_Song
+}
+
+
+
+#################################################
+# CQ8. 2020년 5월 아이튠즈로부터 상을 받은 곡은?  #######
+#################################################
+SELECT ?songTitle ?awardTitle ?description
+WHERE {
+	?x :title ?songTitle .
+	?y :title ?awardTitle .
+	?y rdfs:comment ?description .
+	?x :won ?y
+	{
+		SELECT ?y
+		WHERE {
+			?y :awardedBy :아이튠즈_StreamingServiceCompany .
+			?y :month 5 .
+			?y :year 2020 
+		}
+	}
+}
+
+
+#################################################
+# CQ9. 아이유가 작사한 정승환의 곡은?            #######
+#################################################
+SELECT ?title
+WHERE {
+	?x :title ?title .
+	?x :writtenBy :아이유 .
+	?x :sungBy :정승환
+}
+
+#################################################
+# CQ10. 에잇의 2020년 5월 차트성적은?            #####
+#################################################
+SELECT ?title ?rank
+WHERE {
+	?x :won ?y .
+	?x :title "에잇"^^xsd:string .
+	?y :rank ?rank .
+	?y :title ?title
+	{
+		SELECT ?y
+		{
+			?y rdf:type :MusicAward .
+			?y :month 5 .
+			?y :year 2020
+		}
+	}
+}
+
+
+#################################################
+# CQ11. GOD와 아이유가 협업한 곡은?               #####
+#################################################
+SELECT ?title
+WHERE {
+	?y :sungBy ?x .
+	?y :title ?title .
+	?x :collaborateWith :아이유 .
+	{
+	SELECT ?x
+		WHERE {
+			?x :name "GOD"^^xsd:string
+		}
+	}
+}
+
+
+#################################################
+# CQ12. 2020년 10월 아이유와 스윗소로우가 협업한 곡은? ###
+#################################################
+SELECT ?title
+WHERE {
+	?y :sungBy ?x .
+	?y :title ?title .
+	?y :sungBy :아이유 .
+	?y :released ?released .
+	 FILTER (?released > "2020-10-01T00:00:00"^^xsd:dateTime) .
+      	FILTER (?released < "2020-10-30T23:59:59"^^xsd:dateTime) .
+	?x :collaborateWith :아이유 .
+	{
+	SELECT ?x
+		WHERE {
+			?x :name "스윗소로우"^^xsd:string
+		}
+	}
+}
+
+
+#################################################
+# CQ13. 방시혁이 프로듀싱한 아일랜드 시그널 송은?  ########
+#################################################
+SELECT ?title ?dramaTitle ?dramaDesc
+WHERE
+{
+	?y :isOrignalSoundTrackOf ?x .
+	?y :producedBy :방시혁 .
+	?y rdf:type :Song .
+	?y :title ?title .
+	?x :title ?dramaTitle .
+	?x rdfs:comment ?dramaDesc .
+	{
+		SELECT ?x
+		WHERE {
+			?x rdf:type/rdfs:subClassOf* :ScreenWork .
+			?x :title "아이랜드"^^xsd:string
+		}
+	}
 }
