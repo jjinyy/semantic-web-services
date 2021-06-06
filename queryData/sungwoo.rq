@@ -201,7 +201,7 @@ WHERE {
 
 
 #################################################
-# CQ13. 방시혁이 프로듀싱한 아일랜드 시그널 송은?  ########
+# CQ13. 방시혁이 프로듀 싱한 아일랜드 시그널 송은?  ########
 #################################################
 SELECT ?title ?dramaTitle ?dramaDesc
 WHERE
@@ -219,4 +219,79 @@ WHERE
 			?x :title "아이랜드"^^xsd:string
 		}
 	}
+}
+
+#################################################
+# CQ14. 정규 5집 선공개곡은?    ######################
+#################################################
+SELECT ?title
+WHERE {
+	?x :title ?title .
+	?x :partOf ?y .
+	?x rdf:type :Song .
+	?x :preReleased true .
+	{
+		SELECT ?y
+		WHERE {
+			?y rdf:type :ExtendedPlayAlbum .
+			?y :order 5 .
+		}
+	}
+}
+
+
+#################################################
+# CQ14. 정규 5집 발매일은?    ######################
+#################################################
+SELECT ?released
+WHERE {
+  ?y :released ?released .
+  ?y rdf:type :ExtendedPlayAlbum .
+  ?y :order 5 .
+}
+
+
+#################################################
+# CQ15. 정규 5집 앨범 수록곡은?    ###################
+#################################################
+SELECT ?title
+WHERE {
+	?x :title ?title .
+	?x :partOf ?y .
+	?x rdf:type :Song .
+	{
+		SELECT ?y
+		WHERE {
+			?y rdf:type :ExtendedPlayAlbum .
+			?y :order 5 .
+		}
+	}
+}
+
+
+#################################################
+# CQ15. 이찬혁이 작곡한 곡은?    ###################
+#################################################
+SELECT ?title
+WHERE {
+	?x :title ?title .
+	?x :composedBy ?y .
+	{
+		SELECT ?y
+		WHERE {
+			?y rdf:type :Composer .
+			?y :name "이찬혁"^^xsd:string.
+		}
+	}
+}
+
+
+
+아이유와 콜라보레이션 한 아티스트들의 이름은?
+
+SELECT ?name
+WHERE {
+	?x :name ?name .
+	?x rdf:type/rdfs:subClassOf* :MusicArtist .
+	?x :collaborateWith | ^:collaborateWith :아이유
 }

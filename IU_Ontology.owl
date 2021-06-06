@@ -1072,6 +1072,7 @@
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#LILAC_RegularAlbum"/>
         <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:preReleased rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</IU:preReleased>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celebrity</IU:title>
     </owl:NamedIndividual>
     
@@ -1921,6 +1922,17 @@
         <IU:won rdf:resource="http://localhost:3030/IU#실시간차트1위"/>
         <IU:writtenBy rdf:resource="http://localhost:3030/IU#김이나"/>
         <IU:title>나만몰랐던이야기</IU:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#나얼 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#나얼">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Composer"/>
+        <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
+        <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">나얼</IU:name>
     </owl:NamedIndividual>
     
 
@@ -2778,7 +2790,6 @@
         <owl:sameAs rdf:resource="http://localhost:3030/IU#이지금"/>
         <IU:collaborateWith rdf:resource="http://localhost:3030/IU#김연아"/>
         <IU:collaborateWith rdf:resource="http://localhost:3030/IU#백지영"/>
-        <IU:collaborateWith rdf:resource="http://localhost:3030/IU#성시경"/>
         <IU:collaborateWith rdf:resource="http://localhost:3030/IU#수호"/>
         <IU:collaborateWith rdf:resource="http://localhost:3030/IU#슈가"/>
         <IU:collaborateWith rdf:resource="http://localhost:3030/IU#슬옹"/>
@@ -2884,6 +2895,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#어푸_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+        <IU:composedBy rdf:resource="http://localhost:3030/IU#이찬혁"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#LILAC_RegularAlbum"/>
         <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">어푸 (Ah puh)</IU:title>
@@ -3170,6 +3182,18 @@
         <rdf:type rdf:resource="http://localhost:3030/IU#Person"/>
         <IU:isSubCharactor rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</IU:isSubCharactor>
         <rdfs:comment>아이유 부캐</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#이찬혁 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#이찬혁">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Arranger"/>
+        <rdf:type rdf:resource="http://localhost:3030/IU#Composer"/>
+        <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
+        <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">이찬혁</IU:name>
     </owl:NamedIndividual>
     
 
