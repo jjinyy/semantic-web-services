@@ -1212,6 +1212,16 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#LILAC_RegularAlbum">
         <rdf:type rdf:resource="http://localhost:3030/IU#ExtendedPlayAlbum"/>
+        <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#Celebrity_Song"/>
+        <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#Coin_Song"/>
+        <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#Flu_Song"/>
+        <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#돌림노래_Song"/>
+        <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#라일락_Song"/>
+        <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#봄안녕봄_Song"/>
+        <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#빈컵_Song"/>
+        <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#아이와나의바다_Song"/>
+        <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#어푸_Song"/>
+        <IU:hasTrackOf rdf:resource="http://localhost:3030/IU#에필로그_Song"/>
         <IU:won rdf:resource="http://localhost:3030/IU#2021년4월아차랭킹"/>
         <IU:numberOfTracks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</IU:numberOfTracks>
         <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</IU:order>
@@ -1423,6 +1433,10 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#Palette_ExtendedPlayAlbum">
         <rdf:type rdf:resource="http://localhost:3030/IU#ExtendedPlayAlbum"/>
+        <IU:numberOfTracks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</IU:numberOfTracks>
+        <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</IU:order>
+        <IU:released rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-04-21T18:00:00</IU:released>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Palette</IU:title>
     </owl:NamedIndividual>
     
 
@@ -2158,12 +2172,6 @@
     
 
 
-    <!-- http://localhost:3030/IU#드림하이_OST -->
-
-    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#드림하이_OST"/>
-    
-
-
     <!-- http://localhost:3030/IU#라망_Song -->
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#라망_Song">
@@ -2864,6 +2872,8 @@
         <IU:collaborateWith rdf:resource="http://localhost:3030/IU#슈가"/>
         <IU:collaborateWith rdf:resource="http://localhost:3030/IU#슬옹"/>
         <IU:collaborateWith rdf:resource="http://localhost:3030/IU#피에스타"/>
+        <IU:creates rdf:resource="http://localhost:3030/IU#LILAC_RegularAlbum"/>
+        <IU:creates rdf:resource="http://localhost:3030/IU#LovePoem_MiniAlbum"/>
         <IU:creates rdf:resource="http://localhost:3030/IU#REAL_MiniAlbum"/>
         <IU:holds rdf:resource="http://localhost:3030/IU#REALFANTASY_Concert"/>
         <IU:holds rdf:resource="http://localhost:3030/IU#2018년10월콘서트_Concert"/>
