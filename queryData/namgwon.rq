@@ -44,6 +44,10 @@ select ?concertName
 where{
   ?x :title ?concertName .
   ?x :year 2016 .
+<<<<<<< HEAD
+  ?x rdf:type :Concert .
+=======
+>>>>>>> e7c22338093efaa6e1b35253a1b0eb9c48d2126d
   ?x ^:participatesIn ?아이유 .
 }
 ###########################################################################
@@ -107,7 +111,12 @@ WHERE {
 select ?concertName
 where{
   ?x :title ?concertName .
+<<<<<<< HEAD
+  ?x :year 2017 .
+  ?x rdf:type :Concert .
+=======
  ?x :year 2017 .
+>>>>>>> e7c22338093efaa6e1b35253a1b0eb9c48d2126d
  ?x ^:participatesIn ?아이유 .
 }
 ###########################################################################	
@@ -157,7 +166,7 @@ where{
 ###########################################################################	
 #2018년 가온차트뮤직어워드에서 수상한 내역은?
 ###########################################################################	
-SELECT ?awardName ?streamingCompany
+SELECT ?awardName
 WHERE {
   ?x :title ?awardName .
   ?x :year 2018 .
@@ -169,8 +178,9 @@ WHERE {
 select ?concertName
 where{
   ?x :title ?concertName .
- ?x :year 2018 .
- ?x ^:participatesIn ?아이유 .
+  ?x :year 2018 .
+  ?x rdf:type :Concert .
+  ?x ^:participatesIn ?아이유 .
 }
 ###########################################################################	
 #선우정아와 관련된 곡은?
