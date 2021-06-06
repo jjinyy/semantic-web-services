@@ -18,6 +18,7 @@ WHERE{
   ?x iu:isTitleTrackOf ?Album . 
 FILTER regex(str(?Album),'ModernTimes') . 
   ?x iu:isTitleTrack ?true . 
+  }
   
 
 ################################################# 
@@ -32,6 +33,7 @@ WHERE{
 FILTER regex(str(?Singer),'아이유') . 
   ?x iu:Sing ?Song . 
 FILTER regex(str(?Song),'봄사랑벚꽃말고') . 
+  }
   
 
 ################################################# 
@@ -46,6 +48,7 @@ WHERE{
 FILTER regex(str(?Singer),'아이유') . 
   ?x iu:Sing ?Song . 
 FILTER regex(str(?Song),'너의의미') . 
+  }
 
 
 ################################################# 
@@ -57,6 +60,7 @@ WHERE {
 ?x iu:year ?result . 
 ?x rdf:type iu:ExtendedPlayAlbum . 
 ?x iu:order 3 . 
+  }
   
 
 ################################################# 
@@ -70,6 +74,7 @@ WHERE {
 ?x rdf:type iu:MiniAlbum . 
 ?x iu:numberOfTracks ?result . 
 ?x iu:year ?2015 . 
+  }
   
   
 ################################################# 
@@ -82,6 +87,7 @@ WHERE {
 ?x iu:producedBy ?result . 
 ?x rdf:type iu:MiniAlbum . 
 ?x iu:year ?2015 . 
+  }
  
 
 ################################################# 
@@ -96,6 +102,7 @@ WHERE{
   ?x iu:year ?2015 . 
   ?x iu:producedBy ?Singer . 
 FILTER regex(str(?Singer),'아이유') . 
+  }
 
   
 ################################################# 
@@ -109,6 +116,7 @@ WHERE{
 FILTER regex(str(?Song),'마음') . 
  ?x rdf:type iu:Song . 
   ?x iu:released ?result . 
+  }
  
 
 ################################################# 
@@ -121,6 +129,7 @@ WHERE {
 ?x iu:numberOfTracks ?result . 
 ?x rdf:type iu:ExtendedPlayAlbum . 
 ?x iu:order 3 . 
+  }
 
 
 ################################################# 
@@ -136,6 +145,7 @@ FILTER regex(str(?Album),'ModernTimes') .
 FILTER regex(str(?PD),'아이유') . 
 ?x rdf:type iu:Song . 
   ?x iu:title ?result . 
+  }
 
 ################################################# 
 # CQ11. 2013년에 발매한 정규앨범의 수록곡은? 
@@ -147,6 +157,7 @@ WHERE {
 ?x iu:hasTrackOf ?result . 
 ?x rdf:type iu:ExtendedPlayAlbum . 
 ?x iu:year 2013 . 
+  }
 
 
 ################################################# 
@@ -161,6 +172,7 @@ FILTER regex(str(?Album),'CanYouHearMe') .
 ?x rdf:type iu:Song . 
 ?x iu:title ?result . 
 ?x iu:isTitleTrackOf ?true . 
+  }
 
 
 ################################################# 
@@ -176,6 +188,7 @@ FILTER regex(str(?Singer),'아이유') .
 FILTER regex(str(?Song),'소격동') . 
 ?x rdf:type iu:Singer . 
   ?x iu:name ?result . 
+  }
 
 
 ################################################# 
@@ -191,6 +204,7 @@ FILTER regex(str(?Singer),'아이유') .
 FILTER regex(str(?Song),'레옹') .  
 ?x rdf:type iu:Singer . 
   ?x iu:name ?result . 
+  }
   
 
 ################################################# 
@@ -203,6 +217,7 @@ WHERE{
 FILTER regex(str(?Award),'올해의가수1위') .  
 ?x rdf:type iu:MusicAward . 
   ?x iu:year ?result . 
+  }
   
 ################################################# 
 # CQ16. 챗셔 수록곡중 아이유가 작사, 작곡한 노래는? 
@@ -218,6 +233,7 @@ FILTER regex(str(?Lyricist),'아이유') .
 FILTER regex(str(?composer),'아이유') . 
 ?x rdf:type iu:Song . 
 ?x iu:title ?result . 
+  }
   
 ################################################# 
 # CQ17. 첫번째 리메이크 앨범에 수록된 곡은? 
@@ -228,6 +244,7 @@ WHERE {
 ?x iu:hasTrackOf ?result . 
 ?x rdf:type iu:RemakeAlbum . 
 ?x iu:order 1 . 
+  }
   
 ################################################# 
 # CQ18. 챗-셔에 수록된 첫번째 곡의 작곡가는? 
@@ -240,6 +257,7 @@ FILTER regex(str(?Album),'CHAT-SHIRE') .
 ?x rdf:type iu:Song . 
 ?x iu:order ?1. 
 ?x iu:composedBy ?result. 
+  }
   
 ################################################# 
 # CQ19. 아이유와 콜라보레이션 한 가수들은? 
@@ -251,6 +269,7 @@ WHERE{
 FILTER regex(str(?Singer),'아이유') . 
 ?x rdf:type iu:Singer . 
 ?x iu:name ?result. 
+  }
   
 ################################################# 
 # CQ20. 분홍신이 수록되어있는 정규앨범의 장르는? 
@@ -262,4 +281,5 @@ WHERE{
 FILTER regex(str(?Song),'분홍신') . 
 ?x rdf:type iu:ExtendedPlayAlbum . 
 ?x iu:genre ?result. 
+  }
  
