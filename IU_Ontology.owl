@@ -2362,6 +2362,7 @@
         <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
         <IU:Sing rdf:resource="http://localhost:3030/IU#레옹_Song"/>
         <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">박명수</IU:name>
     </owl:NamedIndividual>
     
 
@@ -2659,6 +2660,7 @@
         <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
         <IU:Sing rdf:resource="http://localhost:3030/IU#소격동_Song"/>
         <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">서태지</IU:name>
     </owl:NamedIndividual>
     
 
