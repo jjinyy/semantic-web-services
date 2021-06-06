@@ -44,10 +44,7 @@ select ?concertName
 where{
   ?x :title ?concertName .
   ?x :year 2016 .
-<<<<<<< HEAD
   ?x rdf:type :Concert .
-=======
->>>>>>> e7c22338093efaa6e1b35253a1b0eb9c48d2126d
   ?x ^:participatesIn ?아이유 .
 }
 ###########################################################################
@@ -111,12 +108,8 @@ WHERE {
 select ?concertName
 where{
   ?x :title ?concertName .
-<<<<<<< HEAD
   ?x :year 2017 .
   ?x rdf:type :Concert .
-=======
- ?x :year 2017 .
->>>>>>> e7c22338093efaa6e1b35253a1b0eb9c48d2126d
  ?x ^:participatesIn ?아이유 .
 }
 ###########################################################################	
