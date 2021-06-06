@@ -5,6 +5,7 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://localhost:3030/IU"/>
@@ -1066,7 +1067,7 @@
     
 
     <!-- http://localhost:3030/IU#Celebrity_Song -->
-
+    
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#Celebrity_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#LILAC_RegularAlbum"/>
@@ -1074,7 +1075,6 @@
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celebrity</IU:title>
     </owl:NamedIndividual>
     
-
 
     <!-- http://localhost:3030/IU#Coin_Song -->
 
@@ -1085,8 +1085,6 @@
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coin</IU:title>
     </owl:NamedIndividual>
     
-
-
 
     <!-- http://localhost:3030/IU#DearMoon_Song -->
 

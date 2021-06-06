@@ -44,7 +44,7 @@ select ?concertName
 where{
   ?x :title ?concertName .
   ?x :year 2016 .
-  ?x :participatesIn ?아이유 .
+  ?x ^:participatesIn ?아이유 .
 }
 ###########################################################################
 #꽃갈피둘 앨범에 참여한 가수들은?
@@ -108,7 +108,7 @@ select ?concertName
 where{
   ?x :title ?concertName .
  ?x :year 2017 .
- ?x :participatesIn ?아이유 .
+ ?x ^:participatesIn ?아이유 .
 }
 ###########################################################################	
 #밤편지 노래로 수상한 상은?
@@ -170,7 +170,7 @@ select ?concertName
 where{
   ?x :title ?concertName .
  ?x :year 2018 .
- ?x :participatesIn ?아이유 .
+ ?x ^:participatesIn ?아이유 .
 }
 ###########################################################################	
 #선우정아와 관련된 곡은?
