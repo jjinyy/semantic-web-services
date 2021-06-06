@@ -1054,6 +1054,7 @@
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicVideo"/>
         <IU:expressFor rdf:resource="http://localhost:3030/IU#Coin_Song"/>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COIN 뮤직비디오</IU:title>
+        <IU:videoUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://youtube.com/aaa</IU:videoUrl>
     </owl:NamedIndividual>
     
 
@@ -1082,6 +1083,7 @@
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#LILAC_RegularAlbum"/>
         <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</IU:order>
         <IU:preReleased rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</IU:preReleased>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celebrity</IU:title>
     </owl:NamedIndividual>
@@ -1094,6 +1096,8 @@
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#LILAC_RegularAlbum"/>
         <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:isTitleTrack rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</IU:isTitleTrack>
+        <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</IU:order>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coin</IU:title>
     </owl:NamedIndividual>
     
@@ -1126,6 +1130,7 @@
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#LILAC_RegularAlbum"/>
         <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</IU:order>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flu</IU:title>
     </owl:NamedIndividual>
     
@@ -1185,6 +1190,15 @@
     
 
 
+    <!-- http://localhost:3030/IU#KBS_BroadcastingCompany -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#KBS_BroadcastingCompany">
+        <rdf:type rdf:resource="http://localhost:3030/IU#BroadcastingCompany"/>
+        <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KBS</IU:companyName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://localhost:3030/IU#KoreaMusicContent_Accociation -->
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#KoreaMusicContent_Accociation">
@@ -1198,6 +1212,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#LILAC_RegularAlbum">
         <rdf:type rdf:resource="http://localhost:3030/IU#ExtendedPlayAlbum"/>
+        <IU:won rdf:resource="http://localhost:3030/IU#2021년4월아차랭킹"/>
         <IU:numberOfTracks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</IU:numberOfTracks>
         <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</IU:order>
         <IU:released rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-25T18:00:00</IU:released>
@@ -1287,6 +1302,15 @@
         <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</IU:order>
         <IU:preReleased rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</IU:preReleased>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LovePoem</IU:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#MBC_BroascastingCompany -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#MBC_BroascastingCompany">
+        <rdf:type rdf:resource="http://localhost:3030/IU#BroadcastingCompany"/>
+        <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MBC</IU:companyName>
     </owl:NamedIndividual>
     
 
@@ -1549,6 +1573,7 @@
         <rdf:type rdf:resource="http://localhost:3030/IU#Record"/>
         <IU:awardedBy rdf:resource="http://localhost:3030/IU#Youtube_StreamingServiceCompany"/>
         <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Youtube</IU:companyName>
+        <IU:record rdf:datatype="http://www.w3.org/2001/XMLSchema#string">유튜브 조회 신기록</IU:record>
     </owl:NamedIndividual>
     
 
@@ -2095,6 +2120,7 @@
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#LILAC_RegularAlbum"/>
         <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</IU:order>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">돌림노래 (Feat. DEAN)</IU:title>
     </owl:NamedIndividual>
     
@@ -2152,7 +2178,12 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#라일락_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#LILAC_RegularAlbum"/>
+        <IU:won rdf:resource="http://localhost:3030/IU#2020년4월뮤직뱅크"/>
+        <IU:won rdf:resource="http://localhost:3030/IU#2021년3월아이튠즈차트_MusicAward"/>
+        <IU:won rdf:resource="http://localhost:3030/IU#2021년4월쇼챔피언"/>
         <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:isTitleTrack rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</IU:isTitleTrack>
+        <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</IU:order>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">라일락</IU:title>
     </owl:NamedIndividual>
     
@@ -2192,6 +2223,7 @@
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicVideo"/>
         <IU:expressFor rdf:resource="http://localhost:3030/IU#마쉬멜로우_Song"/>
         <IU:records rdf:resource="http://localhost:3030/IU#음악사이트10위권"/>
+        <IU:videoUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://youtube.com/aaa</IU:videoUrl>
     </owl:NamedIndividual>
     
 
@@ -2311,6 +2343,7 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#민트쵸코_Food">
         <rdf:type rdf:resource="http://localhost:3030/IU#Chocolate"/>
         <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">민트쵸코</IU:name>
+        <rdfs:comment>박하와 초콜릿을 합친 것 혹은 그것으로 만든 음식.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2398,9 +2431,11 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#봄사랑벚꽃말고_MusicVideo">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicVideo"/>
+        <IU:expressFor rdf:resource="http://localhost:3030/IU#봄사랑벚꽃말고_Song"/>
         <IU:won rdf:resource="http://localhost:3030/IU#Youtube뮤직비디오조회_Record"/>
         <IU:rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</IU:rank>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">봄사랑벚꽃말고</IU:title>
+        <IU:videoUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://youtube.com/aaa</IU:videoUrl>
     </owl:NamedIndividual>
     
 
@@ -2424,6 +2459,7 @@
         <IU:composedBy rdf:resource="http://localhost:3030/IU#나얼"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#LILAC_RegularAlbum"/>
         <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</IU:order>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">봄 안녕 봄</IU:title>
     </owl:NamedIndividual>
     
@@ -2448,9 +2484,10 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#블루밍_MusicVideo">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicVideo"/>
+        <IU:expressFor rdf:resource="http://localhost:3030/IU#Blueming_Song"/>
         <IU:won rdf:resource="http://localhost:3030/IU#Youtube뮤직비디오조회_Record"/>
-        <IU:rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</IU:rank>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">블루밍</IU:title>
+        <IU:videoUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://youtube.com/aaa</IU:videoUrl>
     </owl:NamedIndividual>
     
 
@@ -2483,6 +2520,7 @@
         <IU:partOf rdf:resource="http://localhost:3030/IU#LILAC_RegularAlbum"/>
         <IU:producedBy rdf:resource="http://localhost:3030/IU#우기"/>
         <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</IU:order>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">빈컵 (Empty Cup)</IU:title>
     </owl:NamedIndividual>
     
@@ -2503,11 +2541,13 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#삐삐_MusicVideo">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicVideo"/>
+        <IU:expressFor rdf:resource="http://localhost:3030/IU#삐삐_Song"/>
         <IU:won rdf:resource="http://localhost:3030/IU#Youtube뮤직비디오조회_Record"/>
         <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Youtube</IU:companyName>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</IU:month>
         <IU:rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</IU:rank>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">삐삐</IU:title>
+        <IU:videoUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://youtube.com/aaa</IU:videoUrl>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
     </owl:NamedIndividual>
     
@@ -2713,6 +2753,16 @@
     
 
 
+    <!-- http://localhost:3030/IU#스탯티즈 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#스탯티즈">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Company"/>
+        <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">스탯티즈</IU:companyName>
+        <rdfs:comment>KBO 리그의 각종 야구기록에 세이버메트릭스를 전문적으로 도입한 최초의 통계 사이트 중 하나. 2011년 7월에 폐쇄되었다가 법인화 되면서 2015년 10월 14일 재오픈했다.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://localhost:3030/IU#슬옹 -->
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#슬옹">
@@ -2793,6 +2843,7 @@
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#LILAC_RegularAlbum"/>
         <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</IU:order>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">아이와 나의 바다</IU:title>
     </owl:NamedIndividual>
     
@@ -2918,6 +2969,7 @@
         <IU:composedBy rdf:resource="http://localhost:3030/IU#이찬혁"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#LILAC_RegularAlbum"/>
         <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</IU:order>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">어푸 (Ah puh)</IU:title>
     </owl:NamedIndividual>
     
@@ -2966,9 +3018,11 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#에잇_MusicVideo">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicVideo"/>
+        <IU:expressFor rdf:resource="http://localhost:3030/IU#에잇_Song"/>
         <IU:won rdf:resource="http://localhost:3030/IU#Youtube뮤직비디오조회_Record"/>
         <IU:rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</IU:rank>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">에잇</IU:title>
+        <IU:videoUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://youtube.com/aaa</IU:videoUrl>
     </owl:NamedIndividual>
     
 
@@ -3017,6 +3071,7 @@
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#LILAC_RegularAlbum"/>
         <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</IU:order>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">에필로그</IU:title>
     </owl:NamedIndividual>
     
@@ -3037,7 +3092,7 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#여자솔로초동판매량신기록_Record">
         <rdf:type rdf:resource="http://localhost:3030/IU#Record"/>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</IU:month>
-        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">여자 솔로 초동 판매량 신기록</IU:title>
+        <IU:record rdf:datatype="http://www.w3.org/2001/XMLSchema#string">여자 솔로 초동 판매량 신기록</IU:record>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</IU:year>
     </owl:NamedIndividual>
     
@@ -3244,6 +3299,7 @@
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicVideo"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#Youtube_StreamingServiceCompany"/>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">잊어야한다는마음으로</IU:title>
+        <IU:videoUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://youtube.com/aaa</IU:videoUrl>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</IU:year>
     </owl:NamedIndividual>
     
@@ -3416,6 +3472,18 @@
     
 
 
+    <!-- http://localhost:3030/IU#최단시간음원1위 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#최단시간음원1위">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Record"/>
+        <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</IU:month>
+        <IU:record rdf:datatype="http://www.w3.org/2001/XMLSchema#string">최단시간 음원 1위</IU:record>
+        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2021</IU:year>
+        <rdfs:comment>‘음원 강자’ 아이유가 돌아왔다. 정규 5집 ‘라일락’은 25일 발매 직후 음원차트를 평정했다. 타이틀곡 ‘라일락’은 공개 16시간 만에 멜론 24히트(Hits) 1위에 올랐고, ‘코인(Coin)’ ‘플루(Flu)’ 등 수록곡 10곡 중 6곡이 상위 10위권에 안착했다. 지난해 5월 멜론이 실시간 음원 차트를 폐지하고 최근 24시간 기준으로 개편하면서 사라졌던 ‘줄 세우기’ 현상이 돌아온 것. 지난 1월 선공개한 ‘셀러브리티(Celebrity)’로 공개 3시간 만에 1위에 올랐던 아이유는 개편 후 최단 기록 1, 2위를 모두 차지하게 됐다. 이전 최고 기록은 지난해 7월 MBC ‘놀면 뭐하니?’에서 공개된 싹쓰리의 ‘다시 여기 바닷가’가 세운 18시간이다.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://localhost:3030/IU#최백호_Singer -->
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#최백호_Singer">
@@ -3473,9 +3541,10 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#팔레트_MusicVideo">
         <rdf:type rdf:resource="http://localhost:3030/IU#MusicVideo"/>
+        <IU:expressFor rdf:resource="http://localhost:3030/IU#팔레트_Song"/>
         <IU:won rdf:resource="http://localhost:3030/IU#Youtube뮤직비디오조회_Record"/>
-        <IU:rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</IU:rank>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">팔레트</IU:title>
+        <IU:videoUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://youtube.com/aaa</IU:videoUrl>
     </owl:NamedIndividual>
     
 
@@ -3810,7 +3879,7 @@
     <!-- http://localhost:3030/IU#2018년7월멜론차트1위 -->
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2018년7월멜론차트1위">
-        <rdf:type rdf:resource="http://localhost:3030/IU#Record"/>
+        <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
         <IU:awardedBy rdf:resource="http://localhost:3030/IU#멜론_StreamingServiceCompany"/>
         <IU:companyName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">멜론차트</IU:companyName>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</IU:month>
@@ -3924,6 +3993,7 @@
         <IU:awardedBy rdf:resource="http://localhost:3030/IU#플로_StreamingServiceCompany"/>
         <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</IU:month>
         <IU:rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</IU:rank>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">플로 차트 순위</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</IU:year>
     </owl:NamedIndividual>
     
@@ -3977,6 +4047,19 @@
         <IU:rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</IU:rank>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">멜론 차트 순위</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</IU:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#2020년4월뮤직뱅크 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2020년4월뮤직뱅크">
+        <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
+        <IU:awardedBy rdf:resource="http://localhost:3030/IU#KBS_BroadcastingCompany"/>
+        <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</IU:month>
+        <IU:rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</IU:rank>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KBS 뮤직뱅크</IU:title>
+        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2021</IU:year>
     </owl:NamedIndividual>
     
 
@@ -4057,6 +4140,46 @@
         <IU:rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</IU:rank>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">지니 차트 순위</IU:title>
         <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2020</IU:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#2021년3월아이튠즈차트_MusicAward -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2021년3월아이튠즈차트_MusicAward">
+        <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
+        <IU:awardedBy rdf:resource="http://localhost:3030/IU#아이튠즈_StreamingServiceCompany"/>
+        <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</IU:month>
+        <IU:rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</IU:rank>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">아이튠즈 앨범차트</IU:title>
+        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2021</IU:year>
+        <rdfs:comment>가수 아이유가 새 음반을 통해 &apos;음원 강자&apos;임을 증명했다. 26일 소속사 이담 엔터테인먼트에 따르면, 전날 오후 6시에 발표된 아이유의 정규 5집 &apos;라일락(LILAC)&apos;의 타이틀곡 &apos;라일락&apos;은 주요 음원차트 1위를 차지했다. 앨범 전곡이 상위권에 진입했다. 더불어 이번 신곡은 아이튠즈 앨범 차트 11개국에서도 1위를 기록하면서, 해외 팬들의 인기를 실감케 했다.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#2021년4월쇼챔피언 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2021년4월쇼챔피언">
+        <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
+        <IU:awardedBy rdf:resource="http://localhost:3030/IU#MBC_BroascastingCompany"/>
+        <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</IU:month>
+        <IU:rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</IU:rank>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">쇼챔피언</IU:title>
+        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2021</IU:year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#2021년4월아차랭킹 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#2021년4월아차랭킹">
+        <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
+        <IU:awardedBy rdf:resource="http://localhost:3030/IU#스탯티즈"/>
+        <IU:month rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</IU:month>
+        <IU:rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</IU:rank>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">아이돌차트 랭킹</IU:title>
+        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2021</IU:year>
     </owl:NamedIndividual>
     
 
@@ -4152,5 +4275,5 @@
 
 
 
-
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
