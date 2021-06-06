@@ -5,7 +5,6 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://localhost:3030/IU"/>
@@ -1049,6 +1048,16 @@
     
 
 
+    <!-- http://localhost:3030/IU#COIN_MusicVideo -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#COIN_MusicVideo">
+        <rdf:type rdf:resource="http://localhost:3030/IU#MusicVideo"/>
+        <IU:expressFor rdf:resource="http://localhost:3030/IU#Coin_Song"/>
+        <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COIN 뮤직비디오</IU:title>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://localhost:3030/IU#CanYouHearMe_MiniAlbum -->
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#CanYouHearMe_MiniAlbum">
@@ -1068,7 +1077,7 @@
 
 
     <!-- http://localhost:3030/IU#Celebrity_Song -->
-    
+
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#Celebrity_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#LILAC_RegularAlbum"/>
@@ -1077,6 +1086,7 @@
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celebrity</IU:title>
     </owl:NamedIndividual>
     
+
 
     <!-- http://localhost:3030/IU#Coin_Song -->
 
@@ -1126,6 +1136,7 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#GOD_Singer">
         <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
         <IU:Sing rdf:resource="http://localhost:3030/IU#길_Song"/>
+        <IU:Sing rdf:resource="http://localhost:3030/IU#노래불러줘요_Song"/>
         <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOD</IU:name>
     </owl:NamedIndividual>
@@ -1553,16 +1564,6 @@
     
 
 
-    <!-- http://localhost:3030/IU#god_Singer -->
-
-    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#god_Singer">
-        <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
-        <IU:Sing rdf:resource="http://localhost:3030/IU#노래불러줘요_Song"/>
-        <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://localhost:3030/IU#unlucky_Song -->
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#unlucky_Song">
@@ -1837,6 +1838,18 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#김연아">
         <rdf:type rdf:resource="http://localhost:3030/IU#Singer"/>
         <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#김윤석 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#김윤석">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Actor"/>
+        <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:participatesIn rdf:resource="http://localhost:3030/IU#COIN_MusicVideo"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">김윤석</IU:name>
+        <rdfs:comment>타짜 아귀</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2408,6 +2421,7 @@
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#봄안녕봄_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
+        <IU:composedBy rdf:resource="http://localhost:3030/IU#나얼"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#LILAC_RegularAlbum"/>
         <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">봄 안녕 봄</IU:title>
@@ -2467,6 +2481,7 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#빈컵_Song">
         <rdf:type rdf:resource="http://localhost:3030/IU#Song"/>
         <IU:partOf rdf:resource="http://localhost:3030/IU#LILAC_RegularAlbum"/>
+        <IU:producedBy rdf:resource="http://localhost:3030/IU#우기"/>
         <IU:writtenBy rdf:resource="http://localhost:3030/IU#아이유"/>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">빈컵 (Empty Cup)</IU:title>
     </owl:NamedIndividual>
@@ -3056,6 +3071,16 @@
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#외인구단_DramaWork">
         <rdf:type rdf:resource="http://localhost:3030/IU#DramaWork"/>
         <IU:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">외인구단</IU:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/IU#우기 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#우기">
+        <rdf:type rdf:resource="http://localhost:3030/IU#Producer"/>
+        <IU:collaborateWith rdf:resource="http://localhost:3030/IU#아이유"/>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">우기</IU:name>
     </owl:NamedIndividual>
     
 
@@ -4124,6 +4149,8 @@
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
+
+
 
 
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
