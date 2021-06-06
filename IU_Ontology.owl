@@ -3135,6 +3135,16 @@
     
 
 
+    <!-- http://localhost:3030/IU#올해의가수1위 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/IU#올해의가수1위_MusicAward">
+        <rdf:type rdf:resource="http://localhost:3030/IU#MusicAward"/>
+        <IU:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</IU:year>
+        <IU:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">올해의가수1위</IU:name>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://localhost:3030/IU#외인구단_DramaWork -->
 
     <owl:NamedIndividual rdf:about="http://localhost:3030/IU#외인구단_DramaWork">
