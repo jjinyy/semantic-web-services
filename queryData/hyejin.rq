@@ -14,10 +14,10 @@ PREFIX ui: <http://www.w3.org/ns/ui#>
   
 SELECT ?song 
 WHERE{ 
-  ?x iu:title ?song . 
-  ?x iu:isTitleTrackOf ?Album . 
+  ?x :title ?song . 
+  ?x :isTitleTrackOf ?Album . 
 FILTER regex(str(?Album),'ModernTimes') . 
-  ?x iu:isTitleTrack ?true . 
+  ?x :isTitleTrack ?true . 
   }
   
 
@@ -28,10 +28,10 @@ FILTER regex(str(?Album),'ModernTimes') .
  
 SELECT ?singerName 
 WHERE{ 
-  ?x iu:name ?singerName . 
-  ?x iu:collaborateWith ?Singer . 
+  ?x :name ?singerName . 
+  ?x :collaborateWith ?Singer . 
 FILTER regex(str(?Singer),'아이유') . 
-  ?x iu:Sing ?Song . 
+  ?x :Sing ?Song . 
 FILTER regex(str(?Song),'봄사랑벚꽃말고') . 
   }
   
@@ -43,10 +43,10 @@ FILTER regex(str(?Song),'봄사랑벚꽃말고') .
   
 SELECT ?singerName 
 WHERE{ 
-  ?x iu:name ?singerName . 
-  ?x iu:collaborateWith ?Singer . 
+  ?x :name ?singerName . 
+  ?x :collaborateWith ?Singer . 
 FILTER regex(str(?Singer),'아이유') . 
-  ?x iu:Sing ?Song . 
+  ?x :Sing ?Song . 
 FILTER regex(str(?Song),'너의의미') . 
   }
 
@@ -57,9 +57,9 @@ FILTER regex(str(?Song),'너의의미') .
 
 SELECT ?result 
 WHERE { 
-?x iu:year ?result . 
-?x rdf:type iu:ExtendedPlayAlbum . 
-?x iu:order 3 . 
+?x :year ?result . 
+?x rdf:type :ExtendedPlayAlbum . 
+?x :order 3 . 
   }
   
 
@@ -70,10 +70,10 @@ WHERE {
  
 SELECT ?result 
 WHERE { 
-?x iu:producedBy ?아이유 . 
-?x rdf:type iu:MiniAlbum . 
-?x iu:numberOfTracks ?result . 
-?x iu:year ?2015 . 
+?x :producedBy ?아이유 . 
+?x rdf:type :MiniAlbum . 
+?x :numberOfTracks ?result . 
+?x :year ?2015 . 
   }
   
   
@@ -84,9 +84,9 @@ WHERE {
 
 SELECT ?result 
 WHERE { 
-?x iu:producedBy ?result . 
-?x rdf:type iu:MiniAlbum . 
-?x iu:year ?2015 . 
+?x :producedBy ?result . 
+?x rdf:type :MiniAlbum . 
+?x :year ?2015 . 
   }
  
 
@@ -97,10 +97,10 @@ WHERE {
   
 SELECT ?result 
 WHERE{ 
-?x rdf:type iu:Song . 
-  ?x iu:title ?result . 
-  ?x iu:year ?2015 . 
-  ?x iu:producedBy ?Singer . 
+?x rdf:type :Song . 
+  ?x :title ?result . 
+  ?x :year ?2015 . 
+  ?x :producedBy ?Singer . 
 FILTER regex(str(?Singer),'아이유') . 
   }
 
@@ -112,10 +112,10 @@ FILTER regex(str(?Singer),'아이유') .
   
 SELECT ?result 
 WHERE{ 
-  ?x iu:title ?Song . 
+  ?x :title ?Song . 
 FILTER regex(str(?Song),'마음') . 
- ?x rdf:type iu:Song . 
-  ?x iu:released ?result . 
+ ?x rdf:type :Song . 
+  ?x :released ?result . 
   }
  
 
@@ -126,9 +126,9 @@ FILTER regex(str(?Song),'마음') .
   
 SELECT ?result 
 WHERE { 
-?x iu:numberOfTracks ?result . 
-?x rdf:type iu:ExtendedPlayAlbum . 
-?x iu:order 3 . 
+?x :numberOfTracks ?result . 
+?x rdf:type :ExtendedPlayAlbum . 
+?x :order 3 . 
   }
 
 
@@ -139,12 +139,12 @@ WHERE {
  
 SELECT ?result 
 WHERE{ 
-  ?x iu:partOf ?Album . 
+  ?x :partOf ?Album . 
 FILTER regex(str(?Album),'ModernTimes') . 
-  ?x iu:composedBy ?PD . 
+  ?x :composedBy ?PD . 
 FILTER regex(str(?PD),'아이유') . 
-?x rdf:type iu:Song . 
-  ?x iu:title ?result . 
+?x rdf:type :Song . 
+  ?x :title ?result . 
   }
 
 ################################################# 
@@ -154,9 +154,9 @@ FILTER regex(str(?PD),'아이유') .
   
 SELECT ?result 
 WHERE { 
-?x iu:hasTrackOf ?result . 
-?x rdf:type iu:ExtendedPlayAlbum . 
-?x iu:year 2013 . 
+?x :hasTrackOf ?result . 
+?x rdf:type :ExtendedPlayAlbum . 
+?x :year 2013 . 
   }
 
 
@@ -167,11 +167,11 @@ WHERE {
 
 SELECT ?result 
 WHERE { 
-  ?x iu:isTitleTrackOf ?Album . 
+  ?x :isTitleTrackOf ?Album . 
 FILTER regex(str(?Album),'CanYouHearMe') .  
-?x rdf:type iu:Song . 
-?x iu:title ?result . 
-?x iu:isTitleTrackOf ?true . 
+?x rdf:type :Song . 
+?x :title ?result . 
+?x :isTitleTrackOf ?true . 
   }
 
 
@@ -182,12 +182,12 @@ FILTER regex(str(?Album),'CanYouHearMe') .
 
 SELECT ?result 
 WHERE{ 
-  ?x iu:collaborateWith ?Singer . 
+  ?x :collaborateWith ?Singer . 
 FILTER regex(str(?Singer),'아이유') .  
-?x iu:Sing ?Song . 
+?x :Sing ?Song . 
 FILTER regex(str(?Song),'소격동') . 
-?x rdf:type iu:Singer . 
-  ?x iu:name ?result . 
+?x rdf:type :Singer . 
+  ?x :name ?result . 
   }
 
 
@@ -198,12 +198,12 @@ FILTER regex(str(?Song),'소격동') .
 
 SELECT ?result 
 WHERE{ 
-  ?x iu:collaborateWith ?Singer . 
+  ?x :collaborateWith ?Singer . 
 FILTER regex(str(?Singer),'아이유') .  
-  ?x iu:Sing ?Song . 
+  ?x :Sing ?Song . 
 FILTER regex(str(?Song),'레옹') .  
-?x rdf:type iu:Singer . 
-  ?x iu:name ?result . 
+?x rdf:type :Singer . 
+  ?x :name ?result . 
   }
   
 
@@ -213,10 +213,10 @@ FILTER regex(str(?Song),'레옹') .
   
 SELECT ?result 
 WHERE{ 
-  ?x iu:name ?Award . 
+  ?x :name ?Award . 
 FILTER regex(str(?Award),'올해의가수1위') .  
-?x rdf:type iu:MusicAward . 
-  ?x iu:year ?result . 
+?x rdf:type :MusicAward . 
+  ?x :year ?result . 
   }
   
 ################################################# 
@@ -225,14 +225,14 @@ FILTER regex(str(?Award),'올해의가수1위') .
   
 SELECT ?result 
 WHERE{ 
-  ?x iu:partOf?Album . 
+  ?x :partOf?Album . 
 FILTER regex(str(?Album),'CHAT-SHIRE') . 
-  ?x iu:writtenBy?Lyricist . 
+  ?x :writtenBy?Lyricist . 
 FILTER regex(str(?Lyricist),'아이유') . 
-  ?x iu:composedBy?composer . 
+  ?x :composedBy?composer . 
 FILTER regex(str(?composer),'아이유') . 
-?x rdf:type iu:Song . 
-?x iu:title ?result . 
+?x rdf:type :Song . 
+?x :title ?result . 
   }
   
 ################################################# 
@@ -241,9 +241,9 @@ FILTER regex(str(?composer),'아이유') .
   
 SELECT ?result 
 WHERE { 
-?x iu:hasTrackOf ?result . 
-?x rdf:type iu:RemakeAlbum . 
-?x iu:order 1 . 
+?x :hasTrackOf ?result . 
+?x rdf:type :RemakeAlbum . 
+?x :order 1 . 
   }
   
 ################################################# 
@@ -252,11 +252,11 @@ WHERE {
   
 SELECT ?result 
 WHERE{ 
-  ?x iu:partOf?Album . 
+  ?x :partOf?Album . 
 FILTER regex(str(?Album),'CHAT-SHIRE') . 
-?x rdf:type iu:Song . 
-?x iu:order ?1. 
-?x iu:composedBy ?result. 
+?x rdf:type :Song . 
+?x :order ?1. 
+?x :composedBy ?result. 
   }
   
 ################################################# 
@@ -265,10 +265,10 @@ FILTER regex(str(?Album),'CHAT-SHIRE') .
   
 SELECT ?result 
 WHERE{ 
-  ?x iu:collaborateWith?Singer . 
+  ?x :collaborateWith?Singer . 
 FILTER regex(str(?Singer),'아이유') . 
-?x rdf:type iu:Singer . 
-?x iu:name ?result. 
+?x rdf:type :Singer . 
+?x :name ?result. 
   }
   
 ################################################# 
@@ -277,9 +277,9 @@ FILTER regex(str(?Singer),'아이유') .
   
 SELECT ?result 
 WHERE{ 
-  ?x iu:hasTrackOf?Song . 
+  ?x :hasTrackOf?Song . 
 FILTER regex(str(?Song),'분홍신') . 
-?x rdf:type iu:ExtendedPlayAlbum . 
-?x iu:genre ?result. 
+?x rdf:type :ExtendedPlayAlbum . 
+?x :genre ?result. 
   }
  
